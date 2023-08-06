@@ -1,4 +1,4 @@
-import TextButton from "./TextButton";
+import TextButton from "../Components/TextButton";
 import { Meta } from "@storybook/react";
 
 export default {
