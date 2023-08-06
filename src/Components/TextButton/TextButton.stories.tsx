@@ -1,10 +1,10 @@
 import TextButton from "./TextButton";
-import { ComponentMeta } from "@storybook/react";
+import { Meta } from "@storybook/react";
 
 export default {
     title: "Components/Button",
     component: TextButton,
-} as ComponentMeta<typeof TextButton>;
+} as Meta<typeof TextButton>;
 
 export const Submit = () => <TextButton label="Submit" />;
 
