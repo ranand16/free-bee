@@ -80,7 +80,8 @@
     "main": "dist/index.js",
     "release": {
         "branches": [
-            "release/main"
+            "release/main",
+            "free-bee"
         ]
     }
 }
