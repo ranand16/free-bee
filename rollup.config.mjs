@@ -12,7 +12,7 @@ import { createRequire } from "node:module";
 const requireFile = createRequire(import.meta.url);
 const packageJson = requireFile("./package.json");
 
-const config = [
+export default [
     {
         input: "src/index.ts",
         output: [
@@ -37,12 +37,10 @@ const config = [
             }),
         ],
     },
-    // {
-    //     input: "lib/index.d.ts",
-    //     output: [{ file: "lib/index.d.ts", format: "es" }],
-    //     plugins: [dts()],
-    //     external: [/\.css$/],
-    // },
+    {
+        input: "lib/index.d.ts",
+        output: [{ file: "lib/index.d.ts", format: "es" }],
+        plugins: [dts()],
+        external: [/\.css$/],
+    },
 ];
-
-export default config;

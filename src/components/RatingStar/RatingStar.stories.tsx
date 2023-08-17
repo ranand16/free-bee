@@ -1,6 +1,6 @@
 import * as React from "react";
-import RatingStar from "../Components/RatingStar";
 import { Meta } from "@storybook/react";
+import RatingStar from "./RatingStar";
 
 export default {
     title: "Components/Rating",
