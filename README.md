@@ -54,6 +54,7 @@ List of contriubutors:
 
 MIT license
 
-## React Storybook
+# Thanks to all below
 
-Check how to publish your storybook react app on `NPM` [https://prateeksurana.me/blog/react-component-library-using-storybook-7/]
+Creating a React component library using Storybook (https://prateeksurana.me/blog/react-component-library-using-storybook-7/)
+Writing an awesome Readme📄 for your side projects (https://victorbruce82.medium.com/writing-an-awesome-readme-for-your-side-projects-fabd20f96db0)
