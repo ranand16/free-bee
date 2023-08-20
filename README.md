@@ -32,8 +32,16 @@ We've used `React`, `Typescript`, `Storybook`, `Rollup` and other stuff mentione
 ## Setup
 
 -   download or clone the repository
+-   Go to `main` branch
 -   run `npm install` or `npm i`
 -   check `scripts` in `package.json` to run a command to run the app, run storybook, build the app etc.
+
+# Setup a new design system
+
+-   download the repository
+-   Go to `boilerplate/v1` branch
+-   add `git remote` to this downloaded code
+-   push your first commit
 
 ## Approach
 
