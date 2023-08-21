@@ -7,6 +7,6 @@ export default {
     component: TextButton,
 } as Meta<typeof TextButton>;
 
-export const Submit = () => <TextButton label="Submit" />;
+export const Submit = () => <TextButton theme="light" label="Submit" />;
 
-export const Check = () => <TextButton label="Check" />;
+export const Check = () => <TextButton theme="light" label="Check" />;
