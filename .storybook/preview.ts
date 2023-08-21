@@ -13,17 +13,16 @@ export const parameters = {
             date: /Date$/,
         },
     },
+    globalTypes: {
+        darkMode: {
+            defaultValue: true, // Enable dark mode by default on all stories
+        },
+        // Optional (Default: 'dark')
+        className: {
+            defaultValue: "dark", // Set your custom dark mode class name
+        },
+    },
 };
-
-// export const decorators = [
-//     withThemeByClassName({
-//         themes: {
-//             light: "",
-//             dark: "dark",
-//         },
-//         defaultTheme: "light",
-//     }),
-// ];
 
 export const decorators = [
     withThemeByDataAttribute({
@@ -35,3 +34,13 @@ export const decorators = [
         attributeName: "data-bs-theme",
     }),
 ];
+
+// export const decorators = [
+//     withThemeByClassName({
+//         themes: {
+//             light: "",
+//             dark: "dark",
+//         },
+//         defaultTheme: "light",
+//     }),
+// ];

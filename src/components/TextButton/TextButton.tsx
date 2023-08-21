@@ -1,14 +1,15 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
 
-type ButtonProps = { label: string };
-function TextButton({ label }: ButtonProps) {
+type ButtonProps = { label: string; theme: string };
+function TextButton({ label, theme }: ButtonProps) {
     return (
         <>
-            <Button variant="contained">{label}</Button>{" "}
-            {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button
+                data-bs-theme={theme}
+                className="bg-primary active:bg-primaryactive hover:bg-primaryhov active:border-transparent text-active font-bold rounded-[3.1px] px-2.5 py-1 data-[bs-theme=dark]:bg-secondary data-[bs-theme=dark]:active:bg-secondaryctive data-[bs-theme=dark]:hover:bg-secondaryhov"
+            >
                 {label}
-            </button>{" "} */}
+            </button>
         </>
     );
 }
