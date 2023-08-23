@@ -1,6 +1,4 @@
 import "../src/styles/tailwind.css"; // replace with the name of your tailwind css file
-// import { withThemeByClassName } from "@storybook/addon-styling";
-import { withThemeByDataAttribute } from "@storybook/addon-styling";
 
 export const parameters = {
     actions: { argTypesRegex: "^on[A-Z].*" },
@@ -13,34 +11,21 @@ export const parameters = {
             date: /Date$/,
         },
     },
-    globalTypes: {
-        darkMode: {
-            defaultValue: true, // Enable dark mode by default on all stories
-        },
-        // Optional (Default: 'dark')
-        className: {
-            defaultValue: "dark", // Set your custom dark mode class name
-        },
+    themes: {
+        clearable: false,
+        list: [
+            {
+                name: "Light",
+                class: [],
+                color: "#ffffff",
+                default: true,
+            },
+            {
+                name: "Dark",
+                // The class dark will be added to the body tag
+                class: ["dark"],
+                color: "#000000",
+            },
+        ],
     },
 };
-
-export const decorators = [
-    withThemeByDataAttribute({
-        themes: {
-            light: "light",
-            dark: "dark",
-        },
-        defaultTheme: "light",
-        attributeName: "data-bs-theme",
-    }),
-];
-
-// export const decorators = [
-//     withThemeByClassName({
-//         themes: {
-//             light: "",
-//             dark: "dark",
-//         },
-//         defaultTheme: "light",
-//     }),
-// ];
