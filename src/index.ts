@@ -1,4 +1,4 @@
-import TextButton from "./components/TextButton";
+import Button from "./components/Button";
 import RatingStar from "./components/RatingStar";
 
-export { TextButton, RatingStar };
+export { Button, RatingStar };

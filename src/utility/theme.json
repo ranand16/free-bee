@@ -4,7 +4,7 @@
             "theme_color": {
                 "primary": "#0052CC",
                 "secondary": "#FEE140",
-                "hover": "#0055CC",
+                "hover": "#0065ff",
                 "body": "#fafafa",
                 "border": "#EBEBEB",
                 "active": "#09326C",
@@ -65,7 +65,8 @@
                 "subtle": "#8C9BAB"
             },
             "text_color": {
-                "default": "#172B4D",
+                "default": "#B6C2CF",
+                "default-dark": "#172B4D",
                 "btnactive": "#FFFFFF",
                 "accent-lime": "#B3DF72",
                 "accent-lime-bolder": "#D3F1A7",
