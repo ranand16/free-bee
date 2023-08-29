@@ -22,9 +22,21 @@ export const parameters = {
             },
             {
                 name: "Dark",
-                // The class dark will be added to the body tag
                 class: ["dark"],
                 color: "#000000",
+            },
+        ],
+    },
+    backgrounds: {
+        default: "Light",
+        values: [
+            {
+                name: "Dark",
+                value: "#000000",
+            },
+            {
+                name: "Light",
+                value: "#ffffff",
             },
         ],
     },

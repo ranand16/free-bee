@@ -13,6 +13,7 @@ Access my site at [google.com](https://google.com)
 -   [Technologies](#technologies)
 -   [Setup](#setup)
 -   [Approach](#approach)
+-   [Tailwind configuration](#tailconf)
 -   [Status](#status)
 -   [Credits](#credits)
 -   [License](#license)
@@ -25,9 +26,13 @@ free-bee is a react + storybook + typescript + rollup app which is being built a
 
 Uploading...
 
-## Technologies
+## Technologies/Plugins
 
-We've used `React`, `Typescript`, `Storybook`, `Rollup` and other stuff mentioned in `package.json`. Feel free to checkout.
+We've used `React`, `Typescript`, `Storybook`, `Rollup`, `Tailwind`, `clsx`, `class variance autority(cva)` and other stuff mentioned in `package.json`. Feel free to checkout.
+
+## Why are we using these technologies/plugins?
+
+Loading...
 
 ## Setup
 
@@ -47,9 +52,21 @@ We've used `React`, `Typescript`, `Storybook`, `Rollup` and other stuff mentione
 
 As mentioned earlier that we are building something around design systems but we don;t have a precise plan or approach yet.
 
+## Tailwind Configuration
+
+At `src/utility/theme.json` we have theme configurations, and we make use of this file in tailwind config to set most of the theming values. We will discuss about each here.
+NOTE: We will be mentioning only those values which are being used in this project. In future we will be covering those config as well once we start using them.
+
+1.  Background color: `background` property in theme.json has different kinds of colors which is used to determine background color of different components like button, labels, progress etc.
+    Checkout `src/components/Button` folder for a good intuitive usage of same.
+    NOTE: There are some un-used values which starts after a space.
+
+2.  Theme color: `theme_color` is used at multiple places.
+3.  Text color: `text_color` is also being used in the same way background is being used.
+
 ## Status
 
-free-bee is still in progress.
+We've setup the base project, we're working on colors and typography as of now.
 
 ## Credits
 

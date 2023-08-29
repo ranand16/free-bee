@@ -2,7 +2,7 @@
     "colors": {
         "default": {
             "theme_color": {
-                "primary": "#0052CC",
+                "primary": "#0C66E4",
                 "secondary": "#FEE140",
                 "hover": "#0065ff",
                 "body": "#fafafa",
@@ -102,6 +102,19 @@
                 "subtle": "#9FADBC"
             },
             "background": {
+                "brand-bold": "#0C66E4",
+                "brand-bold-dark": "#579DFF",
+                "brand-bold-hovered": "#0065ff",
+                "brand-bold-hovered-dark": "#85B8FF",
+                "brand-bold-pressed": "#09326C",
+                "brand-bold-pressed-dark": "#CCE0FF",
+                "danger-bold": "#CA3521",
+                "danger-bold-hovered": "#AE2A19",
+                "danger-bold-pressed": "#601E16",
+                "danger-bold-dark": "#F87462",
+                "danger-bold-hovered-dark": "#FF9C8F",
+                "danger-bold-pressed-dark": "#FFD2CC",
+
                 "accent-lime-subtlest": "#2A3818",
                 "accent-lime-subtler": "#37471F",
                 "accent-lime-subtle": "#4C6B1F",
@@ -167,18 +180,12 @@
                 "brand-subtlest": "#092957",
                 "brand-subtlest-hovered": "#09326C",
                 "brand-subtlest-pressed": "#0055CC",
-                "brand-bold": "#579DFF",
-                "brand-bold-hovered": "#85B8FF",
-                "brand-bold-pressed": "#CCE0FF",
                 "brand-boldest": "#E9F2FF",
                 "brand-boldest-hovered": "#CCE0FF",
                 "brand-boldest-pressed": "#85B8FF",
                 "danger": "#4F1C16",
                 "danger-hovered": "#601E16",
                 "danger-pressed": "#AE2A19",
-                "danger-bold": "#F87462",
-                "danger-bold-hovered": "#FF9C8F",
-                "danger-bold-pressed": "#FFD2CC",
                 "warning": "#3F3102",
                 "warning-hovered": "#533F04",
                 "warning-pressed": "#7F5F01",
@@ -350,7 +357,7 @@
             "secondary_type": "sans-serif"
         },
         "font_size": {
-            "base": "16",
+            "base": "14",
             "scale": "1.24571"
         }
     }

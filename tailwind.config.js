@@ -55,6 +55,7 @@ module.exports = {
                 active: theme.colors.default.text_color.btnactive,
                 "theme-light": theme.colors.default.theme_color.theme_light,
                 "theme-dark": theme.colors.default.theme_color.theme_dark,
+                ...theme.colors.default.text_color,
             },
             fontSize: {
                 base: font_base + "px",
@@ -71,6 +72,9 @@ module.exports = {
             fontFamily: {
                 primary: [fontPrimary, fontPrimaryType],
                 secondary: [fontSecondary, fontSecondaryType],
+            },
+            lineHeight: {
+                prime: "2.28571em",
             },
         },
     },
