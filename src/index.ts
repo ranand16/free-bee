@@ -1,4 +1,4 @@
 import Button from "./components/Button";
-import RatingStar from "./components/RatingStar";
+import Popup from "./components/Popup";
 
-export { Button, RatingStar };
+export { Button, Popup };
