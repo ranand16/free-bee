@@ -65,8 +65,8 @@
                 "subtle": "#8C9BAB"
             },
             "text_color": {
-                "default": "#B6C2CF",
-                "default-dark": "#172B4D",
+                "default": "#172B4D",
+                "default-dark": "#c7ced6",
                 "btnactive": "#FFFFFF",
                 "accent-lime": "#B3DF72",
                 "accent-lime-bolder": "#D3F1A7",
@@ -102,6 +102,12 @@
                 "subtle": "#9FADBC"
             },
             "background": {
+                "default-bold": "#091E420F",
+                "default-bold-dark": "#373f49",
+                "default-bold-hovered": "#091E4224",
+                "default-bold-hovered-dark": "#515f70",
+                "default-bold-pressed": "#E9F2FF",
+                "default-bold-pressed-dark": "#b3d4ff",
                 "brand-bold": "#0C66E4",
                 "brand-bold-dark": "#579DFF",
                 "brand-bold-hovered": "#0065ff",

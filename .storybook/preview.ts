@@ -23,7 +23,7 @@ export const parameters = {
             {
                 name: "Dark",
                 class: ["dark"],
-                color: "#000000",
+                color: "#1D2125",
             },
         ],
     },
@@ -32,7 +32,7 @@ export const parameters = {
         values: [
             {
                 name: "Dark",
-                value: "#000000",
+                value: "#1D2125",
             },
             {
                 name: "Light",

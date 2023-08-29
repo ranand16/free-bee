@@ -7,8 +7,12 @@ export default {
     component: Button,
 } as Meta<typeof Button>;
 
+export const DefaultButton = () => (
+    <Button variant={"default"} label="Default button" />
+);
+
 export const PrimaryButton = () => (
-    <Button variant={"default"} label="Primary button" />
+    <Button variant={"primary"} label="Primary button" />
 );
 export const DangerButton = () => (
     <Button variant={"danger"} label="Danger button" />

@@ -4,12 +4,14 @@ import { ButtonHTMLAttributes, forwardRef, FC } from "react";
 import { cn } from "../../utility/functions";
 
 const buttonVariants = cva(
-    "bg-brand-bold text-active leading-prime text-sm font-medium rounded px-2.5",
+    "text-active leading-prime text-sm font-medium rounded px-2.5",
     {
         variants: {
             variant: {
                 default:
-                    "active:bg-brand-bold-pressed hover:bg-brand-bold-hovered active:border-transparent dark:bg-brand-bold-dark dark:active:bg-brand-bold-pressed-dark dark:hover:bg-brand-bold-hovered-dark dark:active:border-transparent-dark",
+                    "text-default bg-default-bold active:bg-default-bold-pressed hover:bg-default-bold-hovered active:text-primary active:border-transparent dark:text-default-dark dark:bg-default-bold-dark dark:active:bg-default-bold-pressed-dark dark:hover:bg-default-bold-hovered-dark dark:active:border-transparent-dark",
+                primary:
+                    "bg-brand-bold active:bg-brand-bold-pressed hover:bg-brand-bold-hovered active:border-transparent dark:bg-brand-bold-dark dark:active:bg-brand-bold-pressed-dark dark:hover:bg-brand-bold-hovered-dark dark:active:border-transparent-dark",
                 danger: "text-btnactive bg-danger-bold hover:bg-danger-bold-hovered active:bg-danger-bold-pressed active:border-transparent dark:bg-danger-bold-dark dark:active:bg-danger-bold-pressed-dark dark:hover:bg-danger-bold-hovered-dark dark:active:border-transparent-dark",
             },
             size: {
