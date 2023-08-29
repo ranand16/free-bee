@@ -1,4 +1,4 @@
-import TextButton from "./components/TextButton";
+import Button from "./components/Button";
 import Popup from "./components/Popup";
 
-export { TextButton, Popup };
+export { Button, Popup };

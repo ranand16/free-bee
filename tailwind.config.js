@@ -39,6 +39,7 @@ module.exports = {
             padding: "2rem",
         },
         extend: {
+            backgroundColor: theme.colors.default.background,
             colors: {
                 text: theme.colors.default.text_color.default,
                 light: theme.colors.default.text_color.light,
@@ -54,6 +55,7 @@ module.exports = {
                 active: theme.colors.default.text_color.btnactive,
                 "theme-light": theme.colors.default.theme_color.theme_light,
                 "theme-dark": theme.colors.default.theme_color.theme_dark,
+                ...theme.colors.default.text_color,
             },
             fontSize: {
                 base: font_base + "px",
@@ -71,22 +73,25 @@ module.exports = {
                 primary: [fontPrimary, fontPrimaryType],
                 secondary: [fontSecondary, fontSecondaryType],
             },
+            lineHeight: {
+                prime: "2.28571em",
+            },
             spacing: {
-                "space.0" : "0rem",
-                "space.025" : "0.125rem",
-                "space.050" : "0.25rem",
-                "space.075" : "0.375rem",
-                "space.100" : "0.5rem",
-                "space.150" : "0.75rem",
-                "space.200" : "1rem",
-                "space.250" : "1.25rem",
-                "space.300" : "1.5rem",
-                "space.400" : "2rem",
-                "space.500" : "2.5rem",
-                "space.600" : "3rem",
-                "space.800" : "4rem",
-                "space.1000" : "5rem"
-            }
+                "space.0": "0rem",
+                "space.025": "0.125rem",
+                "space.050": "0.25rem",
+                "space.075": "0.375rem",
+                "space.100": "0.5rem",
+                "space.150": "0.75rem",
+                "space.200": "1rem",
+                "space.250": "1.25rem",
+                "space.300": "1.5rem",
+                "space.400": "2rem",
+                "space.500": "2.5rem",
+                "space.600": "3rem",
+                "space.800": "4rem",
+                "space.1000": "5rem",
+            },
         },
     },
     plugins: [
