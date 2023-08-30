@@ -1,19 +1,77 @@
 import * as React from "react";
 import { Meta } from "@storybook/react";
-import Button from "./Flags";
+import Flags from "./Flags";
 
 export default {
-    title: "Components/Button",
-    component: Button,
-} as Meta<typeof Button>;
+    title: "Components/Flags",
+    component: Flags,
+} as Meta<typeof Flags>;
 
-export const DefaultButton = () => (
-    <Button variant={"default"} label="Default button" />
+// export const DefaultFlag = () => (
+//     <Flags variant={"default"} closebtn>
+//         <>
+//             <p className="dark:text-btnactive">
+//                 <strong>This is a Default flag</strong>
+//                 <div className="text-md">
+//                     This is a default flag for notification. Any default
+//                     notification will appear in this format.
+//                 </div>
+//             </p>
+//         </>
+//     </Flags>
+// );
+
+export const PrimaryFlag = () => (
+    <Flags variant={"primary"} closebtn>
+        <>
+            <p className="dark:text-btnactive">
+                <strong>This is a Default flag</strong>
+                <div className="text-md">
+                    This is a default flag for notification. Any default
+                    notification will appear in this format.
+                </div>
+            </p>
+        </>
+    </Flags>
 );
 
-export const PrimaryButton = () => (
-    <Button variant={"primary"} label="Primary button" />
+export const SuccessFlag = () => (
+    <Flags variant={"success"} closebtn>
+        <>
+            <p className="dark:text-btnactive">
+                <strong>This is a Default flag</strong>
+                <div className="text-md">
+                    This is a default flag for notification. Any default
+                    notification will appear in this format.
+                </div>
+            </p>
+        </>
+    </Flags>
 );
-export const DangerButton = () => (
-    <Button variant={"danger"} label="Danger button" />
+export const DangerFlag = () => (
+    <Flags variant={"danger"} closebtn>
+        <>
+            <p className="dark:text-btnactive">
+                <strong>This is a Default flag</strong>
+                <div className="text-md">
+                    This is a default flag for notification. Any default
+                    notification will appear in this format.
+                </div>
+            </p>
+        </>
+    </Flags>
+);
+
+export const WarningFlag = () => (
+    <Flags variant={"warning"} closebtn>
+        <>
+            <p className="dark:text-btnactive">
+                <strong>This is a Default flag</strong>
+                <div className="text-md">
+                    This is a default flag for notification. Any default
+                    notification will appear in this format.
+                </div>
+            </p>
+        </>
+    </Flags>
 );

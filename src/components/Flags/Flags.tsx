@@ -3,37 +3,53 @@ import * as React from "react";
 import { HTMLAttributes, forwardRef } from "react";
 import { cn } from "../../utility/functions";
 
-const flagVariants = cva("", {
-    variants: {
-        variant: {
-            default: "",
-            primary: "",
-            danger: "",
+const flagVariants = cva(
+    "text-sm mb-5 w-96 rounded text-default bg-flag after:text-center after:flex after:items-center after:justify-center after:w-4 after:h-4 after:rounded-lg after:absolute after:left-8 after:top-8 dark:text-default-dark dark:bg-flag-dark ",
+    {
+        variants: {
+            variant: {
+                default: "after:bg-default-bold after:content-['𝐢']",
+                success:
+                    "after:text-btnactive after:bg-success-icon after:content-['✓']",
+                primary:
+                    "after:text-btnactive after:bg-brand-bold after:content-['𝐢']",
+                danger: "after:text-btnactive after:bg-danger-bold after:content-['!']",
+                warning:
+                    "after:text-btnactive after:bg-warning-icon after:content-['!']",
+            },
         },
-    },
-    defaultVariants: {
-        variant: "default",
-    },
-});
+        defaultVariants: {
+            variant: "default",
+        },
+    }
+);
+
+/**
+ * This component will be used as container for a flag.
+ * This component will have a dynamic icon input and a dynamic close button.
+ */
 
 interface FlagProps
     extends HTMLAttributes<HTMLDivElement>,
         VariantProps<typeof flagVariants> {
-    label: string;
+    closebtn: boolean;
 }
 
-const Button = forwardRef<HTMLDivElement, FlagProps>(
-    ({ label, className, variant, ...props }, ref) => {
+const Flags = forwardRef<HTMLDivElement, FlagProps>(
+    ({ closebtn, className, variant, children, ...props }, ref) => {
         return (
             <div
                 ref={ref}
                 className={cn(flagVariants({ variant, className }))}
                 {...props}
             >
-                {label}
+                <div className={"flex px-[4rem] py-[1.25rem]"}>{children}</div>
+                {closebtn && (
+                    <button className="absolute top-7 right-8 after:text-md after:text-bolder after:content-['╳']"></button>
+                )}
             </div>
         );
     }
 );
-export default Button;
-export { Button, flagVariants };
+export default Flags;
+export { Flags, flagVariants };
