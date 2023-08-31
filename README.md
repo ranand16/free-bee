@@ -50,7 +50,13 @@ Loading...
 
 ## Approach
 
-As mentioned earlier that we are building something around design systems but we don;t have a precise plan or approach yet.
+We've kept it very simple and will be following Atlassian's design system and develop some of their components.
+
+-   Add Atlassian's coloring system in tailwind here.
+-   Add Atlassian's typography system in tailwind here.
+-   Add Popup, Button, Flags like components here.
+-   Keep adding components until we have a minimal design system ready to implement atleast one of Atlassian's product like JIRA or Confluence.
+-   Peiodically rollout npm package for same to be used externally.
 
 ## Tailwind Configuration
 
@@ -81,5 +87,5 @@ MIT license
 
 # Thanks to all below
 
-[Creating a React component library using Storybook](https://prateeksurana.me/blog/react-component-library-using-storybook-7/)
-[Writing an awesome Readme📄 for your side projects](https://victorbruce82.medium.com/writing-an-awesome-readme-for-your-side-projects-fabd20f96db0)
+1.  [Creating a React component library using Storybook](https://prateeksurana.me/blog/react-component-library-using-storybook-7/)
+2.  [Writing an awesome Readme📄 for your side projects](https://victorbruce82.medium.com/writing-an-awesome-readme-for-your-side-projects-fabd20f96db0)
