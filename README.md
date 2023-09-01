@@ -4,7 +4,7 @@ free-bee
 
 ## Demo link:
 
-Access my site at [google.com](https://google.com)
+Access our site at [free-bee-design-systems.netlify.app](https://free-bee-design-systems.netlify.app/)
 
 ## Table of Content:
 
@@ -69,10 +69,15 @@ NOTE: We will be mentioning only those values which are being used in this proje
 
 2.  Theme color: `theme_color` is used at multiple places.
 3.  Text color: `text_color` is also being used in the same way background is being used.
+4.  Spacing tokens have been added which can be found in `tailwind.config.js` which can be used as a shorthands in various components.
 
 ## Status
 
-We've setup the base project, we're working on colors and typography as of now.
+| Components | Status |
+| --- | --- |
+| Button | Completed |
+| PopUp | In Progress |
+| Flags | In Progress |
 
 <!-- ## What are we learning while building this styleguide/design system
 
