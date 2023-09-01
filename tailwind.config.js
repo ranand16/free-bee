@@ -92,6 +92,9 @@ module.exports = {
                 "space.800": "4rem",
                 "space.1000": "5rem",
             },
+            rotate: {
+                310: "310deg",
+            },
         },
     },
     plugins: [

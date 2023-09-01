@@ -4,7 +4,7 @@ import { HTMLAttributes, forwardRef } from "react";
 import { cn } from "../../utility/functions";
 
 const flagVariants = cva(
-    "text-sm mb-5 w-96 rounded text-default bg-flag after:text-center after:flex after:items-center after:justify-center after:w-4 after:h-4 after:rounded-lg after:absolute after:left-8 after:top-8 dark:text-default-dark dark:bg-flag-dark ",
+    "text-sm mb-5 w-96 relative rounded text-default bg-flag after:text-center after:flex after:items-center after:justify-center after:w-4 after:h-4 after:rounded-lg after:absolute after:left-6 after:top-6 dark:text-default-dark dark:bg-flag-dark ",
     {
         variants: {
             variant: {
@@ -45,7 +45,7 @@ const Flags = forwardRef<HTMLDivElement, FlagProps>(
             >
                 <div className={"flex px-[4rem] py-[1.25rem]"}>{children}</div>
                 {closebtn && (
-                    <button className="absolute top-7 right-8 after:text-md after:text-bolder after:content-['╳']"></button>
+                    <button className="absolute top-4 right-8 after:text-md after:text-bolder after:content-['╳']"></button>
                 )}
             </div>
         );
