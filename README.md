@@ -79,6 +79,10 @@ NOTE: We will be mentioning only those values which are being used in this proje
 | PopUp | In Progress |
 | Flags | In Progress |
 
+<!-- ## What are we learning while building this styleguide/design system
+
+Obviously once you read the approach and other things mentioned above you will get to know what someone would learn in course of building a design system. Let's try to understand: -->
+
 ## Credits
 
 List of contriubutors:
