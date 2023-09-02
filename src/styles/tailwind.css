@@ -6,6 +6,12 @@
         transform: rotate(360deg);
     }
 }
+
+input {
+    @apply ring-offset-0 ring-0;
+    --tw-ring-shadow: 0 0 #000 !important;
+}
+
 .loader {
     box-sizing: border-box;
     animation-delay: 0ms;

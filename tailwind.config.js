@@ -56,6 +56,7 @@ module.exports = {
                 "theme-light": theme.colors.default.theme_color.theme_light,
                 "theme-dark": theme.colors.default.theme_color.theme_dark,
                 ...theme.colors.default.text_color,
+                ...theme.colors.default.background,
             },
             fontSize: {
                 base: font_base + "px",
