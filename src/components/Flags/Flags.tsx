@@ -4,7 +4,7 @@ import { HTMLAttributes, forwardRef } from "react";
 import { cn } from "../../utility/functions";
 
 const flagVariants = cva(
-    "text-sm mb-5 w-96 relative rounded text-default bg-flag after:text-center after:flex after:items-center after:justify-center after:w-4 after:h-4 after:rounded-lg after:absolute after:left-6 after:top-6 dark:text-default-dark dark:bg-flag-dark ",
+    "text-sm mb-5 w-96 relative rounded text-default bg-flag after:text-center after:flex after:items-center after:justify-center after:w-4 after:h-4 after:rounded-lg after:absolute after:left-6 after:top-6 dark:text-default-dark dark:bg-flag-dark shadow-flag dark:shadow-flag",
     {
         variants: {
             variant: {

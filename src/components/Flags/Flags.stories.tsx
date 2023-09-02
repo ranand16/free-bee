@@ -25,6 +25,7 @@ export const PrimaryFlag = () => {
     return (
         <div>
             <Flags variant={"primary"} closebtn>
+                {/* Here starts your content for flag */}
                 <>
                     <p className="dark:text-btnactive">
                         <strong>This is a Default flag</strong>
@@ -34,6 +35,7 @@ export const PrimaryFlag = () => {
                         </div>
                     </p>
                 </>
+                {/* Here ends your content for flag */}
             </Flags>
         </div>
     );
@@ -42,6 +44,7 @@ export const PrimaryFlag = () => {
 export const SuccessFlag = () => (
     <div>
         <Flags variant={"success"} closebtn>
+            {/* Here starts your content for flag */}
             <>
                 <p className="dark:text-btnactive">
                     <strong>This is a Default flag</strong>
@@ -51,12 +54,14 @@ export const SuccessFlag = () => (
                     </div>
                 </p>
             </>
+            {/* Here ends your content for flag */}
         </Flags>
     </div>
 );
 export const DangerFlag = () => (
     <div>
         <Flags variant={"danger"} closebtn>
+            {/* Here starts your content for flag */}
             <>
                 <p className="dark:text-btnactive">
                     <strong>This is a Default flag</strong>
@@ -66,6 +71,7 @@ export const DangerFlag = () => (
                     </div>
                 </p>
             </>
+            {/* Here ends your content for flag */}
         </Flags>
     </div>
 );
@@ -73,6 +79,7 @@ export const DangerFlag = () => (
 export const WarningFlag = () => (
     <div>
         <Flags variant={"warning"} closebtn>
+            {/* Here starts your content for flag */}
             <>
                 <p className="dark:text-btnactive">
                     <strong>This is a Default flag</strong>
@@ -82,6 +89,7 @@ export const WarningFlag = () => (
                     </div>
                 </p>
             </>
+            {/* Here ends your content for flag */}
         </Flags>
     </div>
 );

@@ -95,6 +95,9 @@ module.exports = {
             rotate: {
                 310: "310deg",
             },
+            boxShadow: {
+                flag: `0 20px 32px -8px ${theme.colors.default.theme_color.shadow2},0 0 1px ${theme.colors.default.theme_color.shadow2}`,
+            },
         },
     },
     plugins: [
