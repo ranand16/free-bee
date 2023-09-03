@@ -1,8 +1,9 @@
 import React from "react";
+import { MultiselectItem } from "./Multiselect.stories";
 
 interface DropdownProps {
-    list: string[];
-    addItem: (item: string) => void;
+    list: MultiselectItem[];
+    addItem: (item: MultiselectItem) => void;
 }
 
 const Dropdown = ({ list, addItem }: DropdownProps) => {
@@ -15,14 +16,14 @@ const Dropdown = ({ list, addItem }: DropdownProps) => {
                 {list.map((item, key) => {
                     return (
                         <div
-                            key={key}
+                            key={item["key"]}
                             className="cursor-pointer w-full border-gray-100 rounded-t border-b hover:bg-teal-100"
                             onClick={() => addItem(item)}
                         >
                             <div className="flex items-center p-2 pl-2 border-transparent border-l-2 relative hover:border-teal-100">
                                 <div className="w-full items-center flex">
                                     <div className="mx-2 leading-6  ">
-                                        {item}
+                                        {item["value"]}
                                     </div>
                                 </div>
                             </div>

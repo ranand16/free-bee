@@ -1,23 +1,28 @@
 import React, { useState } from "react";
 import Dropdown from "./Dropdown";
+import { MultiselectItem } from "./Multiselect.stories";
 
 interface MultiselectProps {
-    items: string[];
+    items: MultiselectItem[];
+    selectedItems: MultiselectItem[];
+    setSelected: React.Dispatch<React.SetStateAction<MultiselectItem[]>>;
 }
 
-const Multiselect = ({ items }: MultiselectProps) => {
+const Multiselect = ({
+    items,
+    selectedItems,
+    setSelected,
+}: MultiselectProps) => {
     // state showing if dropdown is open or closed
     const [dropdown, setDropdown] = useState<boolean>(false);
     // managing dropdown items (list of dropdown items)
-    const [currentItems, setCurrentItems] = useState<string[]>(items);
-    // contains selected items
-    const [selectedItems, setSelected] = useState<string[]>([]);
+    const [currentItems, setCurrentItems] = useState<MultiselectItem[]>(items);
 
     const toogleDropdown = () => {
         setDropdown(!dropdown);
     };
     // adds new item to multiselect
-    const addTag = async (item: string) => {
+    const addTag = async (item: MultiselectItem) => {
         if (selectedItems.indexOf(item) !== -1) return;
         setSelected(() => {
             const newItems = selectedItems.concat(item); // new selected items array value
@@ -30,8 +35,10 @@ const Multiselect = ({ items }: MultiselectProps) => {
         });
     };
     // removes item from multiselect
-    const removeTag = (item: string) => {
-        const filtered = selectedItems.filter((e) => e !== item);
+    const removeTag = (item: MultiselectItem) => {
+        const filtered = selectedItems.filter(
+            (e) => e["value"] !== item["value"]
+        );
         setSelected(filtered);
         setCurrentItems([...currentItems, item]);
     };
@@ -50,7 +57,7 @@ const Multiselect = ({ items }: MultiselectProps) => {
             return;
         }
         const filteredNewList = currentNonSelItems.filter((i) =>
-            i.includes(event.target.value)
+            i["value"].includes(event.target.value)
         );
 
         setCurrentItems(filteredNewList);
@@ -68,11 +75,11 @@ const Multiselect = ({ items }: MultiselectProps) => {
                                         {selectedItems.map((tag, index) => {
                                             return (
                                                 <div
-                                                    key={index}
+                                                    key={tag["key"]}
                                                     className="flex justify-center items-center m-1 font-medium py-1 px-2 rounded-[3px] text-default bg-default-bold border border-default-bold"
                                                 >
                                                     <div className="text-xs font-normal leading-none max-w-full flex-initial">
-                                                        {tag}
+                                                        {tag["value"]}
                                                     </div>
                                                     <div className="flex flex-auto flex-row-reverse">
                                                         <div
