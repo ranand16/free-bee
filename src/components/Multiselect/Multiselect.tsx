@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import Dropdown from "./Dropdown";
 
-const Multiselect = () => {
+interface MultiselectProps {
+    items: string[];
+}
+
+const Multiselect = ({
+    items = ["john", "milos", "steph", "kathreine"],
+}: MultiselectProps) => {
     // state showing if dropdown is open or closed
     const [dropdown, setDropdown] = useState(false);
     // managing dropdown items (list of dropdown items)
-    const [items, setItems] = useState(["john", "milos", "steph", "kathreine"]);
+    const [currentItems, setCurrentItems] = useState(items);
     // contains selected items
     const [selectedItems, setSelected] = useState<string[]>([]);
 
@@ -13,22 +19,47 @@ const Multiselect = () => {
         setDropdown(!dropdown);
     };
     // adds new item to multiselect
-    const addTag = (item: string) => {
+    const addTag = async (item: string) => {
         if (selectedItems.indexOf(item) !== -1) return;
-        setItems([...items.filter((eachItem) => item != eachItem)]);
-        setSelected(selectedItems.concat(item));
-        setDropdown(false);
+        setSelected(() => {
+            const newItems = selectedItems.concat(item); // new selected items array value
+            const newCurrentFilteredItems = items.filter((e) =>
+                newItems.indexOf(e)
+            ); // setting non-selected values
+            setCurrentItems(newCurrentFilteredItems);
+            setDropdown(false);
+            return newItems;
+        });
     };
     // removes item from multiselect
     const removeTag = (item: string) => {
         const filtered = selectedItems.filter((e) => e !== item);
         setSelected(filtered);
+        setCurrentItems([...currentItems, item]);
+    };
+
+    const editDropdownInput = (
+        event: React.ChangeEvent<HTMLInputElement>
+    ): void => {
+        console.log(event);
+        const currentNonSelItems = items.filter((e) =>
+            selectedItems.indexOf(e)
+        ); // items - selected items
+        if (event.target.value == "") {
+            setCurrentItems(currentNonSelItems);
+            return;
+        }
+        const filteredNewList = currentNonSelItems.filter((i) =>
+            i.includes(event.target.value)
+        );
+
+        setCurrentItems(filteredNewList);
     };
 
     return (
         <div className="autcomplete-wrapper">
             <div className="autcomplete">
-                <div className="w-full flex flex-col items-center mx-auto">
+                <div className="w-full flex flex-col items-center mx-auto relative">
                     <div className="w-full">
                         <div className="flex flex-col items-center relative">
                             <div className="w-full ">
@@ -83,6 +114,7 @@ const Multiselect = () => {
                                             <input
                                                 placeholder=""
                                                 onClick={toogleDropdown}
+                                                onChange={editDropdownInput}
                                                 className="bg-transparent p-1 px-2 appearance-none border-none shadow-none outline-none tw-ring-shadow-none focus:tw-ring-shadow-none focus:border-none focus:outline-none focus:shadow-none h-full w-full text-gray-800"
                                             />
                                         </div>
@@ -112,7 +144,10 @@ const Multiselect = () => {
                             </div>
                         </div>
                         {dropdown ? (
-                            <Dropdown list={items} addItem={addTag}></Dropdown>
+                            <Dropdown
+                                list={currentItems}
+                                addItem={addTag}
+                            ></Dropdown>
                         ) : null}
                     </div>
                 </div>
