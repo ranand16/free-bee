@@ -5,13 +5,11 @@ interface MultiselectProps {
     items: string[];
 }
 
-const Multiselect = ({
-    items = ["john", "milos", "steph", "kathreine"],
-}: MultiselectProps) => {
+const Multiselect = ({ items }: MultiselectProps) => {
     // state showing if dropdown is open or closed
-    const [dropdown, setDropdown] = useState(false);
+    const [dropdown, setDropdown] = useState<boolean>(false);
     // managing dropdown items (list of dropdown items)
-    const [currentItems, setCurrentItems] = useState(items);
+    const [currentItems, setCurrentItems] = useState<string[]>(items);
     // contains selected items
     const [selectedItems, setSelected] = useState<string[]>([]);
 
@@ -24,7 +22,7 @@ const Multiselect = ({
         setSelected(() => {
             const newItems = selectedItems.concat(item); // new selected items array value
             const newCurrentFilteredItems = items.filter((e) =>
-                newItems.indexOf(e)
+                newItems.indexOf(e) < 0 ? true : false
             ); // setting non-selected values
             setCurrentItems(newCurrentFilteredItems);
             setDropdown(false);
@@ -41,11 +39,13 @@ const Multiselect = ({
     const editDropdownInput = (
         event: React.ChangeEvent<HTMLInputElement>
     ): void => {
-        console.log(event);
         const currentNonSelItems = items.filter((e) =>
-            selectedItems.indexOf(e)
+            selectedItems.indexOf(e) < 0 ? true : false
         ); // items - selected items
         if (event.target.value == "") {
+            const currentNonSelItems = items.filter((e) =>
+                selectedItems.indexOf(e) < 0 ? true : false
+            ); // items - selected items
             setCurrentItems(currentNonSelItems);
             return;
         }
@@ -120,7 +120,7 @@ const Multiselect = ({
                                         </div>
                                     </div>
                                     <div
-                                        className="text-gray-300 w-8 py-1 pl-2 pr-1 border-l flex items-center border-gray-200"
+                                        className="text-gray-300 w-8 py-1 pl-2 pr-1 border-r rotate-180 flex items-center border-gray-200"
                                         onClick={toogleDropdown}
                                     >
                                         <button className="cursor-pointer w-6 h-6 text-gray-600 outline-none focus:outline-none">
