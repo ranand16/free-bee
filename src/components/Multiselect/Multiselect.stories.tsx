@@ -9,6 +9,15 @@ export default {
 
 export const MultiselectComponent = () => (
     <div className="h-[300px]">
-        <Multiselect />
+        <Multiselect
+            items={[
+                "john boom",
+                "boom",
+                "milos",
+                "steph",
+                "kathreine",
+                "stephen",
+            ]}
+        />
     </div>
 );
