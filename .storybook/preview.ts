@@ -4,13 +4,13 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "@fontsource/material-icons";
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 export const parameters = {
     actions: { argTypesRegex: "^on[A-Z].*" },
     layout: "centered",
     viewport: {
-        viewports: INITIAL_VIEWPORTS
+        viewports: INITIAL_VIEWPORTS,
     },
     controls: {
         expanded: true,
@@ -40,12 +40,12 @@ export const parameters = {
         default: "Light",
         values: [
             {
-                name: "Dark",
-                value: "#1D2125",
-            },
-            {
                 name: "Light",
                 value: "#ffffff",
+            },
+            {
+                name: "Dark",
+                value: "#1D2125",
             },
         ],
     },

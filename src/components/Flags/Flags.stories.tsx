@@ -21,57 +21,75 @@ export default {
 //     </Flags>
 // );
 
-export const PrimaryFlag = () => (
-    <Flags variant={"primary"} closebtn>
-        <>
-            <p className="dark:text-btnactive">
-                <strong>This is a Default flag</strong>
-                <div className="text-md">
-                    This is a default flag for notification. Any default
-                    notification will appear in this format.
-                </div>
-            </p>
-        </>
-    </Flags>
-);
+export const PrimaryFlag = () => {
+    return (
+        <div>
+            <Flags variant={"primary"} closebtn>
+                {/* Here starts your content for flag */}
+                <>
+                    <p className="dark:text-btnactive">
+                        <strong>This is a Default flag</strong>
+                        <div className="text-md">
+                            This is a default flag for notification. Any default
+                            notification will appear in this format.
+                        </div>
+                    </p>
+                </>
+                {/* Here ends your content for flag */}
+            </Flags>
+        </div>
+    );
+};
 
 export const SuccessFlag = () => (
-    <Flags variant={"success"} closebtn>
-        <>
-            <p className="dark:text-btnactive">
-                <strong>This is a Default flag</strong>
-                <div className="text-md">
-                    This is a default flag for notification. Any default
-                    notification will appear in this format.
-                </div>
-            </p>
-        </>
-    </Flags>
+    <div>
+        <Flags variant={"success"} closebtn>
+            {/* Here starts your content for flag */}
+            <>
+                <p className="dark:text-btnactive">
+                    <strong>This is a Default flag</strong>
+                    <div className="text-md">
+                        This is a default flag for notification. Any default
+                        notification will appear in this format.
+                    </div>
+                </p>
+            </>
+            {/* Here ends your content for flag */}
+        </Flags>
+    </div>
 );
 export const DangerFlag = () => (
-    <Flags variant={"danger"} closebtn>
-        <>
-            <p className="dark:text-btnactive">
-                <strong>This is a Default flag</strong>
-                <div className="text-md">
-                    This is a default flag for notification. Any default
-                    notification will appear in this format.
-                </div>
-            </p>
-        </>
-    </Flags>
+    <div>
+        <Flags variant={"danger"} closebtn>
+            {/* Here starts your content for flag */}
+            <>
+                <p className="dark:text-btnactive">
+                    <strong>This is a Default flag</strong>
+                    <div className="text-md">
+                        This is a default flag for notification. Any default
+                        notification will appear in this format.
+                    </div>
+                </p>
+            </>
+            {/* Here ends your content for flag */}
+        </Flags>
+    </div>
 );
 
 export const WarningFlag = () => (
-    <Flags variant={"warning"} closebtn>
-        <>
-            <p className="dark:text-btnactive">
-                <strong>This is a Default flag</strong>
-                <div className="text-md">
-                    This is a default flag for notification. Any default
-                    notification will appear in this format.
-                </div>
-            </p>
-        </>
-    </Flags>
+    <div>
+        <Flags variant={"warning"} closebtn>
+            {/* Here starts your content for flag */}
+            <>
+                <p className="dark:text-btnactive">
+                    <strong>This is a Default flag</strong>
+                    <div className="text-md">
+                        This is a default flag for notification. Any default
+                        notification will appear in this format.
+                    </div>
+                </p>
+            </>
+            {/* Here ends your content for flag */}
+        </Flags>
+    </div>
 );

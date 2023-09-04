@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@keyframes lds-ring {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+input {
+    @apply ring-offset-0 ring-0;
+    --tw-ring-shadow: 0 0 #000 !important;
+}
+
+.loader {
+    box-sizing: border-box;
+    animation-delay: 0ms;
+    margin: 3px;
+    border: 3px solid currentColor;
+    border-radius: 50%;
+    animation: lds-ring 0.86s cubic-bezier(0.4, 0.15, 0.6, 0.85) infinite normal
+        none running;
+    border-color: currentColor currentColor transparent transparent;
+}

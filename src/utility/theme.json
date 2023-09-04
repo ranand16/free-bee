@@ -8,8 +8,8 @@
                 "body": "#fafafa",
                 "border": "#EBEBEB",
                 "active": "#09326C",
-                "theme_light": "#E5E5E5",
-                "theme_dark": "#1a202c"
+                "shadow1": "#091E4224",
+                "shadow2": "#091E424F"
             },
             "link": {
                 "primary": "#579DFF",
