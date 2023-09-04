@@ -57,6 +57,7 @@ module.exports = {
                 "theme-dark": theme.colors.default.theme_color.theme_dark,
                 ...theme.colors.default.text_color,
                 ...theme.colors.default.background,
+                ...theme.colors.default.others,
             },
             fontSize: {
                 base: font_base + "px",
@@ -98,6 +99,9 @@ module.exports = {
             },
             boxShadow: {
                 flag: `0 20px 32px -8px ${theme.colors.default.theme_color.shadow2},0 0 1px ${theme.colors.default.theme_color.shadow2}`,
+            },
+            transitionProperty: {
+                bgColor: "background-color",
             },
         },
     },
