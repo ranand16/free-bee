@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Button from "../Button/Button";
-import "./popup.css";
 
 export default function Popup() {
     const [show, setShow] = useState(false);
@@ -11,14 +10,14 @@ export default function Popup() {
                 onClick={() => setShow(!show)}
             >
                 <Button
-                    variant={"default"}
+                    variant={"primary"}
                     label={!show ? "Open Popup!" : "Close Popup!"}
                 />
             </div>
             <div>
                 {show ? (
                     <span
-                        className="popuptext p-space.200 text-center rounded-md fixed z-10"
+                        className="popuptext p-space.200 text-center rounded-md fixed z-10 shadow-light-box dark:bg-input-hovered dark:text-btnactive"
                         id="myPopup"
                     >
                         A Simple Popup!
