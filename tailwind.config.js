@@ -57,6 +57,7 @@ module.exports = {
                 "theme-dark": theme.colors.default.theme_color.theme_dark,
                 ...theme.colors.default.text_color,
                 ...theme.colors.default.background,
+                ...theme.colors.default.others,
             },
             fontSize: {
                 base: font_base + "px",
@@ -94,12 +95,20 @@ module.exports = {
                 "space.1000": "5rem",
             },
             boxShadow: {
-                "light-box": "var(--overlay, 0 4px 8px -2px rgba(9, 30, 66, 0.25), 0 0 1px rgba(9, 30, 66, 0.31))",
-                "dark-box" : "var(--overlay, 0 4px 8px -2px rgba(9, 30, 66, 0.25), 0 0 1px rgba(9, 30, 66, 0.31))",
+                "light-box":
+                    "var(--overlay, 0 4px 8px -2px rgba(9, 30, 66, 0.25), 0 0 1px rgba(9, 30, 66, 0.31))",
+                "dark-box":
+                    "var(--overlay, 0 4px 8px -2px rgba(9, 30, 66, 0.25), 0 0 1px rgba(9, 30, 66, 0.31))",
                 flag: `0 20px 32px -8px ${theme.colors.default.theme_color.shadow2},0 0 1px ${theme.colors.default.theme_color.shadow2}`,
             },
             rotate: {
                 310: "310deg",
+            },
+            boxShadow: {
+                flag: `0 20px 32px -8px ${theme.colors.default.theme_color.shadow2},0 0 1px ${theme.colors.default.theme_color.shadow2}`,
+            },
+            transitionProperty: {
+                bgColor: "background-color",
             },
         },
     },

@@ -77,8 +77,8 @@ NOTE: We will be mentioning only those values which are being used in this proje
 | --------------- | ----------- |
 | Button          | Completed   |
 | Flags           | Completed   |
+| Multiple select | Completed   |
 | PopUp           | In Progress |
-| Multiple select | In Progress |
 
 <!-- ## What are we learning while building this styleguide/design system
 
