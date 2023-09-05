@@ -4,7 +4,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "../../utility/functions";
 
 const InputFieldVariants = cva(
-  "text-sm text-subtle dark:text-subtle-old box-border px-space.075 py-space.100 border-input-border border-2 rounded hover:bg-text-input-hovered focus:bg-flag dark:bg-input dark:border-[#A6C5E229] dark:focus-within:border-[#85B8FF] dark:caret-[#ffffff] dark:text-[#ffffff] dark:hover:bg-input-hovered",
+  "text-sm text-subtle dark:text-subtle-old box-border px-space.075 py-space.100 border-input-border border-2 rounded hover:bg-text-input-hovered focus:bg-flag dark:bg-input dark:border-[#A6C5E229] dark:focus-within:border-[#85B8FF] dark:caret-[#ffffff] dark:text-[#ffffff] dark:hover:bg-input-hovered transition-colors duration-200 ease-in-out",
   {
     variants: {
       variant: {
