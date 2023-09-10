@@ -13,12 +13,23 @@ input {
 }
 
 .loader {
-    box-sizing: border-box;
-    animation-delay: 0ms;
-    margin: 3px;
-    border: 3px solid currentColor;
-    border-radius: 50%;
+    @apply box-border delay-0 m-[3px] rounded-full;
     animation: lds-ring 0.86s cubic-bezier(0.4, 0.15, 0.6, 0.85) infinite normal
         none running;
     border-color: currentColor currentColor transparent transparent;
+}
+
+/* :has(~ .tooltip) {
+    @apply relative;
+} */
+
+/* :has(~ .tooltip):is(:hover, :focus-visible, :active) ~ .tooltip {
+    @apply delay-200;
+} */
+
+.tooltip {
+    &::before {
+        clip: rect(1px, 1px, 1px, 1px);
+        clip-path: inset(50%);
+    }
 }

@@ -78,6 +78,9 @@ NOTE: We will be mentioning only those values which are being used in this proje
 | Button          | Completed   |
 | Flags           | Completed   |
 | Multiple select | Completed   |
+| Lozenges        | Completed   |
+| Loader          | In Progress |
+| Tooltip         | In Progress |
 | PopUp           | In Progress |
 
 <!-- ## What are we learning while building this styleguide/design system
