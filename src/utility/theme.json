@@ -9,7 +9,7 @@
                 "border": "#EBEBEB",
                 "active": "#09326C",
                 "shadow1": "#091E4224",
-                "shadow2": "#091E424F"                
+                "shadow2": "#091E424F"
             },
             "link": {
                 "primary": "#579DFF",
@@ -110,7 +110,7 @@
                 "accent-orange-subtle": "#974F0C",
                 "accent-blue-subtle": "#0055CC",
                 "accent-red-subtle": "#AE2A19",
-                "accent-green-subtle": "#216E4E",                
+                "accent-green-subtle": "#216E4E",
                 "subtle-old": "#9FADBC",
 
                 "accent-lime": "#B3DF72",
@@ -189,6 +189,8 @@
                 "primary-dark-subtler": "#0747a654",
                 "danger-dark-subtler": "#bf260054",
                 "warning-dark-subtler": "#ff8b0054",
+                "accent-gray-subtlest": "#2C333A",
+                "neutral-bold": "#9FADBC",
                 "text-input-hovered": "#F7F8F9",
                 "input": "#22272B",
 
@@ -227,7 +229,6 @@
                 "accent-magenta-subtler": "#50253F",
                 "accent-magenta-subtle": "#943D73",
                 "accent-magenta-bolder": "#E774BB",
-                "accent-gray-subtlest": "#2C333A",
                 "accent-gray-subtler-old": "#454F59",
                 "accent-gray-subtle": "#596773",
                 "accent-gray-bolder": "#8C9BAB",
@@ -242,7 +243,6 @@
                 "neutral-subtle": "#00000000",
                 "neutral-subtle-hovered": "#A1BDD914",
                 "neutral-subtle-pressed": "#A6C5E229",
-                "neutral-bold": "#9FADBC",
                 "neutral-bold-hovered": "#B6C2CF",
                 "neutral-bold-pressed": "#C7D1DB",
                 "selected": "#092957",
