@@ -16,7 +16,8 @@
                 "pressed": "#85B8FF"
             },
             "others": {
-                "accent-blue": "#388BFF"
+                "accent-blue": "#388BFF",
+                "input-border": "#DFE1E6"
             },
             "border": {
                 "accent-blue": "#388BFF",
@@ -43,7 +44,8 @@
                 "success": "#2ABB7F",
                 "discovery": "#8F7EE7",
                 "information": "#388BFF",
-                "bold": "#738496"
+                "bold": "#738496",
+                "input-hovered": "#091E4224"
             },
             "icon": {
                 "default": "#44546F",
@@ -109,6 +111,7 @@
                 "accent-blue-subtle": "#0055CC",
                 "accent-red-subtle": "#AE2A19",
                 "accent-green-subtle": "#216E4E",
+                "subtle-old": "#9FADBC",
 
                 "accent-lime": "#B3DF72",
                 "accent-lime-bolder": "#D3F1A7",
@@ -139,8 +142,7 @@
                 "success": "#7EE2B8",
                 "discovery": "#B8ACF6",
                 "information": "#85B8FF",
-                "subtlest-old": "#8C9BAB",
-                "subtle-old": "#9FADBC"
+                "subtlest-old": "#8C9BAB"
             },
             "background": {
                 "default-bold": "#091E420F",
@@ -189,6 +191,8 @@
                 "warning-dark-subtler": "#ff8b0054",
                 "accent-gray-subtlest": "#2C333A",
                 "neutral-bold": "#9FADBC",
+                "text-input-hovered": "#F7F8F9",
+                "input": "#22272B",
 
                 "blue-bold": "#1D7AFC",
                 "blue-bolder-hovered": "#579DFF",
@@ -229,7 +233,6 @@
                 "accent-gray-subtle": "#596773",
                 "accent-gray-bolder": "#8C9BAB",
                 "disabled": "#BCD6F00A",
-                "input": "#22272B",
                 "input-pressed": "#22272B",
                 "inverse-subtle": "#FFFFFF29",
                 "inverse-subtle-hovered": "#FFFFFF3D",
