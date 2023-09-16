@@ -284,9 +284,10 @@
                 "information-bold-pressed": "#CCE0FF"
             },
             "blanket": {
-                "primary": "#10121499",
-                "selected": "#1D7AFC14",
-                "danger": "#E3493514"
+                "blanket-primary": "#10121499",
+
+                "blanket-selected": "#1D7AFC14",
+                "blanket-danger": "#E3493514"
             },
             "interaction": {
                 "hovered": "#ffffff33",

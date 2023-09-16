@@ -57,6 +57,7 @@ module.exports = {
                 "theme-dark": theme.colors.default.theme_color.theme_dark,
                 ...theme.colors.default.text_color,
                 ...theme.colors.default.background,
+                ...theme.colors.default.blanket,
                 ...theme.colors.default.others,
             },
             fontSize: {
