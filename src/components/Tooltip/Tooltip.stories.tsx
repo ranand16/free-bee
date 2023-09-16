@@ -4,48 +4,48 @@ import Tooltip from "./Tooltip";
 import Button from "../Button/Button";
 
 export default {
-    titile: "Components/Tooltip",
+    title: "Components/Tooltip",
     component: Tooltip,
     tags: ["autodocs"],
     argTypes: {},
 } as Meta<typeof Tooltip>;
 
 export const TopTooltip = () => {
-    const peer = "topTT";
     return (
         <div className="h-16 w-20">
             <div className="relative">
                 <Button
                     variant={"primary"}
                     label="Hover me"
-                    className={`${peer} peer`}
-                    id={peer}
-                    aria-describedby={peer}
+                    className={"topTT peer"}
+                    id={"topTT"}
+                    aria-describedby={"topTT"}
                 />
-                <Tooltip peerClass={peer} content="Tooltip" tipPosition="top" />
+                <Tooltip
+                    key={"topTT"}
+                    peerClass={"topTT"}
+                    content="Tooltip"
+                    tipPosition="top"
+                />
             </div>
         </div>
     );
 };
 
 export const RightTooltip = () => {
-    const peer = "pert";
     return (
         <div className="h-16 w-20">
             <div className="relative">
                 <Button
                     variant={"primary"}
                     label="Hover me"
-                    className={`pert peer`}
-                    // className={`${peer} peer`}
+                    className={"pert peer"}
                     id={"pert"}
-                    // id={peer}
                     aria-describedby={"pert"}
-                    // aria-describedby={peer}
                 />
                 <Tooltip
+                    key={"pert"}
                     peerClass={"pert"}
-                    // peerClass={peer}
                     content="Tooltip"
                     tipPosition="right"
                 />
@@ -55,19 +55,20 @@ export const RightTooltip = () => {
 };
 
 export const BottomTooltip = () => {
-    const peer = "bottomTT";
+    // const peer = "bottomTT";
     return (
         <div className="h-16 w-20">
             <div className="relative">
                 <Button
                     variant={"primary"}
                     label="Hover me"
-                    className={`${peer} peer`}
-                    id={peer}
-                    aria-describedby={peer}
+                    className={`bottomTT peer`}
+                    id={"bottomTT"}
+                    aria-describedby={"bottomTT"}
                 />
                 <Tooltip
-                    peerClass={peer}
+                    key={"bottomTT"}
+                    peerClass={"bottomTT"}
                     content="Tooltip"
                     tipPosition="bottom"
                 />
@@ -77,31 +78,19 @@ export const BottomTooltip = () => {
 };
 
 export const LeftTooltip = () => {
-    const peer = "leftTT";
     return (
         <div className="h-16 w-20">
             <div className="relative">
-                {/* <label id="tp1-label" htmlFor="first">
-                First Name:
-            </label> */}
-                {/* <input
-                // className={`pert peer`}
-                className={`${peer} peer`}
-                id={peer}
-                type="text"
-                name="first"
-                size={20}
-                aria-describedby="pert"
-            /> */}
                 <Button
                     variant={"primary"}
                     label="Hover me"
-                    className={`${peer} peer`}
-                    id={peer}
-                    aria-describedby={peer}
+                    className={`leftTT peer`}
+                    id={"leftTT"}
+                    aria-describedby={"leftTT"}
                 />
                 <Tooltip
-                    peerClass={peer}
+                    key={"leftTT"}
+                    peerClass={"leftTT"}
                     content="Tooltip"
                     tipPosition="left"
                 />
