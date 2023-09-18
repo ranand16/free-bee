@@ -16,7 +16,7 @@ export const DefaultModal = () => {
             <div className="relative">
                 <Button
                     variant={"primary"}
-                    label="Hover me"
+                    label="Open Modal"
                     className={"peer"}
                     id={"modal-btn-trigger"}
                 />
