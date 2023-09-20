@@ -18,6 +18,9 @@ export const PrimaryButton = () => (
 export const DangerButton = () => (
     <Button variant={"danger"} label="Danger button" loading={false} />
 );
+
+export const LinkButton = () => <Button variant={"link"} label="Link" />;
+
 export const LoadingButton = () => {
     const [defaultBtnLoading, setDefault] = useState(false);
     const [primaryLoading, setPrimary] = useState(false);

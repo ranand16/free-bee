@@ -1,8 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@keyframes lds-ring {
-    100% {
+
+@keyframes spinnerRotateAnimation {
+    to {
         transform: rotate(360deg);
     }
 }
@@ -11,12 +12,13 @@ input {
     @apply ring-offset-0 ring-0;
     --tw-ring-shadow: 0 0 #000 !important;
 }
-
 .loader {
-    @apply box-border delay-0 m-[3px] rounded-full;
-    animation: lds-ring 0.86s cubic-bezier(0.4, 0.15, 0.6, 0.85) infinite normal
-        none running;
-    border-color: currentColor currentColor transparent transparent;
+    stroke-dasharray: calc(50px * 2.8);
+    stroke-dashoffset: calc(50px * 2.25);
+    stroke-linecap: round;
+    stroke-width: calc(50px / 10);
+    animation: spinnerRotateAnimation 0.86s cubic-bezier(0.4, 0.15, 0.6, 0.85)
+        infinite;
 }
 
 /* :has(~ .tooltip) {
