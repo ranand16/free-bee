@@ -41,7 +41,11 @@ const ModalContent: FC<ModalContentProps> = ({ className, size, children }) => {
                         label="Next"
                         variant={"default"}
                     />
-                    <Button className="min-w-0" label="Close" />
+                    <Button
+                        className="min-w-0"
+                        label="Close"
+                        variant={"link"}
+                    />
                 </div>
                 <div className="text-subtlest pr-[10px] overflow-hidden overflow-ellipsis whitespace-nowrap leading-8 ">
                     This is a hint.This is a hint.This is a hint.This is a hint.
