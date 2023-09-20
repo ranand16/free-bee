@@ -101,12 +101,10 @@ module.exports = {
                 "dark-box":
                     "var(--overlay, 0 4px 8px -2px rgba(9, 30, 66, 0.25), 0 0 1px rgba(9, 30, 66, 0.31))",
                 flag: `0 20px 32px -8px ${theme.colors.default.theme_color.shadow2},0 0 1px ${theme.colors.default.theme_color.shadow2}`,
+                modal: `0px 8px 12px ${theme.colors.default.theme_color.shadow1}, 0px 0px 1px ${theme.colors.default.theme_color.shadow2}`,
             },
             rotate: {
                 310: "310deg",
-            },
-            boxShadow: {
-                flag: `0 20px 32px -8px ${theme.colors.default.theme_color.shadow2},0 0 1px ${theme.colors.default.theme_color.shadow2}`,
             },
             transitionProperty: {
                 bgColor: "background-color",

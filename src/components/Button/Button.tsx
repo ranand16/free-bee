@@ -14,6 +14,7 @@ const buttonVariants = cva(
                 primary:
                     "bg-brand-bold active:bg-brand-bold-pressed hover:bg-brand-bold-hovered active:border-transparent dark:bg-brand-bold-dark dark:active:bg-brand-bold-pressed-dark dark:hover:bg-brand-bold-hovered-dark dark:active:border-transparent-dark disabled:opacity-50",
                 danger: "text-btnactive bg-danger-bold hover:bg-danger-bold-hovered active:bg-danger-bold-pressed active:border-transparent dark:bg-danger-bold-dark dark:active:bg-danger-bold-pressed-dark dark:hover:bg-danger-bold-hovered-dark dark:active:border-transparent-dark disabled:opacity-50",
+                link: "p-0 hover:underline focus:underline text-primary",
             },
             size: {
                 default: "h-8",
@@ -46,12 +47,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                 {...props}
             >
                 {loading ? (
-                    <div className="rotate-310">
-                        <Loader
-                            className={
-                                size == "compact" ? "w-4 h-4" : "w-6 h-6"
-                            }
-                        />
+                    <div className="rotate-310 w-full h-full relative">
+                        <Loader className="" />
                     </div>
                 ) : (
                     <div>{label}</div>
