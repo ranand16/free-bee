@@ -25,10 +25,14 @@ const ModalContent: FC<ModalContentProps> = ({ className, size, children }) => {
                 "bg-white rounded-[3px] w-1/3 m-auto border border-solid border-accent-yellow-subtle"
             )}
         >
-            <header className="flex items-center justify-between px-5 h-[62px] border-t-0 border-b-2 rounded-[3px] font-normal w-full text-default">
-                This is modal header
+            <header className="prose flex items-center justify-between px-5 h-[62px] border-t-0 border-b-2 rounded-[3px] font-normal w-full text-default">
+                <h1 className="font-medium transform-none text-2xl leading-5 tracking-[-0.01rem]">
+                    The modal dialog title
+                </h1>
             </header>
-            <div className="p-5">This is the modal body</div>
+            <div className="p-5 min-h-[86px] text-default text-sm">
+                <p>This is the modal body</p>
+            </div>
             <footer className="border-b-0 border-t-2 rounded-[3px] border-t-shadow1 py-[10px] px-5 h-[52px] w-full">
                 <div className="float-right gap-2 flex flex-row h-full">
                     <Button
@@ -47,11 +51,8 @@ const ModalContent: FC<ModalContentProps> = ({ className, size, children }) => {
                         variant={"link"}
                     />
                 </div>
-                <div className="text-subtlest pr-[10px] overflow-hidden overflow-ellipsis whitespace-nowrap leading-8 ">
-                    This is a hint.This is a hint.This is a hint.This is a hint.
-                    This is a hint.This is a hint. This is a hint.This is a
-                    hint. This is a hint.This is a hint. This is a hint.This is
-                    a hint.This is a hint.This is a hint.This is a hint.
+                <div className="text-subtlest text-sm pr-[10px] overflow-hidden overflow-ellipsis whitespace-nowrap leading-8 ">
+                    This is a hint.
                 </div>
             </footer>
         </section>
