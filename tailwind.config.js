@@ -33,6 +33,7 @@ module.exports = {
             lg: "1024px",
             xl: "1280px",
             "2xl": "1536px",
+            "max-h-500": { raw: "(max-height: 500px)" },
         },
         container: {
             center: true,
@@ -112,7 +113,6 @@ module.exports = {
         },
     },
     plugins: [
-        require("@tailwindcss/typography"),
         require("@tailwindcss/forms"),
         require("tailwind-bootstrap-grid")({
             generateContainer: false,
