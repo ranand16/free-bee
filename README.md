@@ -80,6 +80,7 @@ NOTE: We will be mentioning only those values which are being used in this proje
 | Multiple select | Completed   |
 | Lozenges        | Completed   |
 | Modal           | Completed   |
+| Avatars         | Completed   |
 | Loader          | In Progress |
 | Tooltip         | In Progress |
 | PopUp           | In Progress |
