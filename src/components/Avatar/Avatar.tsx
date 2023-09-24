@@ -5,16 +5,16 @@ import { cn } from "../../utility/functions";
 // https://aui.atlassian.com/aui/latest/docs/images/avatar-person.svg
 // https://aui.atlassian.com/aui/latest/docs/images/avatar-project.svg
 
-const avatarVariants = cva("", {
+const avatarVariants = cva("border-2 border-white", {
     variants: {
         size: {
-            xs: "w-4",
-            sm: "w-6",
-            md: "w-8",
-            lg: "w-12",
-            xl: "w-16",
-            xxl: "w-24",
-            xxxl: "w-32",
+            xs: "w-4 h-4",
+            sm: "w-6 h-6",
+            md: "w-8 h-8",
+            lg: "w-12 h-12",
+            xl: "w-16 h-16",
+            xxl: "w-24 h-24",
+            xxxl: "w-32 h-32",
         },
         rounded: {
             xs: "rounded",
@@ -32,13 +32,13 @@ const avatarVariants = cva("", {
 const statusVariants = cva("absolute", {
     variants: {
         size: {
-            xs: "w-[4px]",
-            sm: "w-[6px]",
-            md: "w-[8px]",
-            lg: "w-[12px]",
-            xl: "w-[16px]",
-            xxl: "w-[24px]",
-            xxxl: "w-[32px]",
+            xs: "w-[4px] h-[4px]",
+            sm: "w-[6px] h-[6px]",
+            md: "w-[8px] h-[8px]",
+            lg: "w-[12px] h-[12px]",
+            xl: "w-[16px] h-[16px]",
+            xxl: "w-[24px] h-[24px]",
+            xxxl: "w-[32px] h-[32px]",
         },
         position: {
             topLeft: "top-0 left-0",
@@ -52,6 +52,7 @@ const statusVariants = cva("absolute", {
 interface AvatarProps
     extends React.ImgHTMLAttributes<HTMLImageElement>,
         VariantProps<typeof avatarVariants> {
+    status?: boolean;
     statusSize?: "xs" | "sm" | "md" | "lg" | "xl" | "xxl" | "xxxl";
     statusColor?: string;
     statusPosition?: "topLeft" | "topRight" | "bottomLeft" | "bottomRight";
@@ -64,7 +65,8 @@ const Avatar = ({
     alt,
     size,
     rounded,
-    statusColor,
+    status,
+    statusColor = "#36B37E",
     statusSize,
     statusPosition = "topRight",
     ...props
@@ -79,25 +81,17 @@ const Avatar = ({
                 className={cn(avatarVariants({ size, rounded }))}
                 {...props}
             />
-            {statusColor && (
-                <svg
+            {status && (
+                <div
+                    style={{ background: statusColor }}
                     className={cn(
+                        `h-auto rounded-full border-2 border-white`,
                         statusVariants({
                             position: statusPosition,
-                            size: statusSize,
+                            size: statusSize || size,
                         })
                     )}
-                    version="1.1"
-                    viewBox="0 0 8 8"
-                    fill={statusColor}
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <circle
-                        cx={statusSize}
-                        cy={statusSize}
-                        r={statusSize}
-                    ></circle>
-                </svg>
+                ></div>
             )}
         </div>
     );

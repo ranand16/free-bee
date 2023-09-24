@@ -19,13 +19,23 @@ export const PersonAvatar = () => {
     // The avatar is full rounded by default
     return (
         <div className="flex items-end gap-1">
-            <Avatar size={"xs"} src={avatarSrc} statusColor="#36B37E" />
-            <Avatar size={"sm"} src={avatarSrc} statusColor="#36B37E" />
-            <Avatar size={"md"} src={avatarSrc} statusColor="#36B37E" />
-            <Avatar size={"lg"} src={avatarSrc} statusColor="#36B37E" />
-            <Avatar size={"xl"} src={avatarSrc} statusColor="#36B37E" />
-            <Avatar size={"xxl"} src={avatarSrc} statusColor="#36B37E" />
-            <Avatar size={"xxxl"} src={avatarSrc} statusColor="#36B37E" />
+            <Avatar size={"xs"} src={avatarSrc} />
+            <Avatar size={"sm"} src={avatarSrc} />
+            <Avatar size={"md"} src={avatarSrc} />
+            <Avatar
+                size={"lg"}
+                src={
+                    "https://icon-library.com/images/avatar-icon-images/avatar-icon-images-4.jpg"
+                }
+            />
+            <Avatar size={"xl"} src={avatarSrc} />
+            <Avatar size={"xxl"} src={avatarSrc} />
+            <Avatar
+                size={"xxxl"}
+                src={
+                    "https://icon-library.com/images/avatar-icon-images/avatar-icon-images-4.jpg"
+                }
+            />
         </div>
     );
 };
@@ -42,6 +52,20 @@ export const ProjectAvatar = () => {
             <Avatar size={"xxl"} rounded={"xxl"} src={projectSrc} />
             <Avatar size={"xxxl"} rounded={"xxxl"} src={projectSrc} />
             <Avatar size={"xxxl"} rounded={"full"} src={projectSrc} />
+        </div>
+    );
+};
+
+export const PersonAvatarStatus = () => {
+    return (
+        <div className="flex items-end gap-1">
+            <Avatar size={"xs"} src={avatarSrc} status />
+            <Avatar size={"sm"} src={avatarSrc} status />
+            <Avatar size={"md"} src={avatarSrc} status statusColor="#FF5630" />
+            <Avatar size={"lg"} src={avatarSrc} status />
+            <Avatar size={"xl"} src={avatarSrc} status statusColor="#FF5630" />
+            <Avatar size={"xxl"} src={avatarSrc} status />
+            <Avatar size={"xxxl"} src={avatarSrc} status />
         </div>
     );
 };
