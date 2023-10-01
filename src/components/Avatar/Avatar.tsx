@@ -5,7 +5,7 @@ import { cn } from "../../utility/functions";
 // https://aui.atlassian.com/aui/latest/docs/images/avatar-person.svg
 // https://aui.atlassian.com/aui/latest/docs/images/avatar-project.svg
 
-const avatarVariants = cva("border-2 border-white", {
+const avatarVariants = cva("border-2 border-white dark:border-black", {
     variants: {
         size: {
             xs: "w-4 h-4",
@@ -64,7 +64,7 @@ const Avatar = ({
     height,
     alt,
     size,
-    rounded,
+    rounded = "full",
     status,
     statusColor = "#36B37E",
     statusSize,
@@ -85,7 +85,7 @@ const Avatar = ({
                 <div
                     style={{ background: statusColor }}
                     className={cn(
-                        `h-auto rounded-full border-2 border-white`,
+                        `h-auto rounded-full border-2 border-white dark:border-black`,
                         statusVariants({
                             position: statusPosition,
                             size: statusSize || size,
