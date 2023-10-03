@@ -26,7 +26,7 @@ const Tag = forwardRef<HTMLInputElement, InputFieldProps>(
   ({ label, href, className, variant, removeButtonLabel, ...props }, ref) => {
     return (
       <div
-        className="tag inline-flex items-center h-[20px] m-[4px] p-0 relative bg-default-bold rounded-[3px] overflow-hidden"
+        className={`tag inline-flex items-center h-[20px] m-[4px] p-0 relative bg-default-bold dark:bg-inverse ${href ? "dark:hover:bg-neutral-hovered" : ""} rounded-[3px] overflow-hidden`}
         ref={ref}
       >
         {href ? (
@@ -34,7 +34,7 @@ const Tag = forwardRef<HTMLInputElement, InputFieldProps>(
             {label}
           </a>
         ) : (
-          <span className="text-sm whitespace-nowrap text-ellipsis max-w-[180px] px-[4px] py-[2px]">
+          <span className="text-sm whitespace-nowrap text-ellipsis dark:text-neutral-bold-hovered max-w-[180px] px-[4px] py-[2px]">
             {label}
           </span>
         )}
