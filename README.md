@@ -87,6 +87,7 @@ NOTE: We will be mentioning only those values which are being used in this proje
 | Input Field     | Completed   |
 | Tags            | Completed   |
 | Banner          | Completed   |
+| Text Field      | Completed   |
 
 <!-- ## What are we learning while building this styleguide/design system
 
