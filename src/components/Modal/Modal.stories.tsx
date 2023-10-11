@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/react";
+import { Meta, Story, StoryFn } from "@storybook/react";
 import * as React from "react";
 import Modal from "./Modal";
 import Button from "../Button";
@@ -9,6 +9,14 @@ export default {
     tags: ["autodocs"],
     argTypes: {},
 } as Meta<typeof Modal>;
+
+// export const Primary: StoryFn = () => {
+//     return {
+//         args: {
+//             variant: "primary",
+//         },
+//     };
+// };
 
 export const DefaultModal = () => {
     const defaultModalRef = React.useRef(null);
