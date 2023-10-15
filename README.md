@@ -81,13 +81,14 @@ NOTE: We will be mentioning only those values which are being used in this proje
 | Lozenges        | Completed   |
 | Modal           | Completed   |
 | Avatars         | Completed   |
-| Loader          | In Progress |
-| Tooltip         | In Progress |
-| PopUp           | In Progress |
 | Input Field     | Completed   |
 | Tags            | Completed   |
 | Banner          | Completed   |
 | Text Field      | Completed   |
+| Checkbox        | Completed   |
+| Loader          | In Progress |
+| Tooltip         | In Progress |
+| PopUp           | In Progress |
 
 <!-- ## What are we learning while building this styleguide/design system
 
