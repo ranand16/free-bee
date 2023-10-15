@@ -9,3 +9,17 @@ export default {
 } as Meta<typeof Checkbox>;
 
 export const DefaultCheckbox = () => <Checkbox labelText="Check me" />;
+
+export const SizeCheckbox = () => (
+    <div>
+        <Checkbox size={"sm"} labelText="Small checkbox" />
+        <br />
+        <Checkbox size={"md"} labelText="Medium checkbox" />
+        <br />
+        <Checkbox size={"lg"} labelText="large checkbox" />
+        <br />
+        <Checkbox size={"xl"} labelText="Extra large checkbox" />
+        <br />
+        <Checkbox labelText="Check me" />
+    </div>
+);
