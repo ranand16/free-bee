@@ -60,6 +60,7 @@ module.exports = {
                 ...theme.colors.default.background,
                 ...theme.colors.default.blanket,
                 ...theme.colors.default.icons,
+                ...theme.colors.default.border,
                 ...theme.colors.default.others,
             },
             fontSize: {

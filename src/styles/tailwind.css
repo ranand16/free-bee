@@ -8,6 +8,15 @@
     }
 }
 
+@keyframes draw-checkbox {
+    0% {
+        stroke-dashoffset: 33;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
 input {
     @apply ring-offset-0 ring-0;
     --tw-ring-shadow: 0 0 #000 !important;

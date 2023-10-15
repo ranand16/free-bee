@@ -8,4 +8,4 @@ export default {
     component: Checkbox,
 } as Meta<typeof Checkbox>;
 
-export const DefaultCheckbox = () => <Checkbox />;
+export const DefaultCheckbox = () => <Checkbox labelText="Check me" />;
