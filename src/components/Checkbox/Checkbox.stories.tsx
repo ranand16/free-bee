@@ -10,6 +10,10 @@ export default {
 
 export const DefaultCheckbox = () => <Checkbox labelText="Check me" />;
 
+export const DisabledCheckbox = () => (
+    <Checkbox labelText="Check me" disabled />
+);
+
 export const SizeCheckbox = () => (
     <div>
         <Checkbox size={"sm"} labelText="Small checkbox" />
