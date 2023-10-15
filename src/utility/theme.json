@@ -195,6 +195,7 @@
                 "input": "#22272B",
                 "neutral-bold-hovered": "#B6C2CF",
                 "neutral-hovered": "#A6C5E229",
+                "selected-pressed": "#0055CC",
 
                 "blue-bold": "#1D7AFC",
                 "blue-bolder-hovered": "#579DFF",
@@ -247,7 +248,6 @@
                 "neutral-bold-pressed": "#C7D1DB",
                 "selected": "#092957",
                 "selected-hovered": "#09326C",
-                "selected-pressed": "#0055CC",
                 "selected-bold": "#579DFF",
                 "selected-bold-hovered": "#85B8FF",
                 "selected-bold-pressed": "#CCE0FF",
