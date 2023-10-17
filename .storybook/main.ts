@@ -6,6 +6,7 @@ module.exports = {
         "@storybook/addon-interactions",
         "@storybook/addon-actions",
         "storybook-addon-themes",
+        "@storybook/addon-a11y",
         {
             name: "@storybook/addon-styling",
             options: {
