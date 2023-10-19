@@ -16,11 +16,12 @@ const checkboxVariants = cva("", {
 });
 
 interface CheckboxProps
-    extends HTMLAttributes<HTMLElement>,
+    extends HTMLAttributes<HTMLInputElement>,
         VariantProps<typeof checkboxVariants> {
     labelText?: string;
     size?: "sm" | "md" | "lg" | "xl";
     disabled?: boolean;
+    key?: string;
 }
 
 const Checkbox: FC<CheckboxProps> = ({
@@ -28,12 +29,14 @@ const Checkbox: FC<CheckboxProps> = ({
     size = "md",
     labelText,
     disabled = false,
+    key,
     ...props
 }) => {
     return (
         <label
             className="w-full flex items-center gap-2 cursor-pointer select-none"
             htmlFor={id}
+            key={key}
         >
             <input
                 className={cn(
