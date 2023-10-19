@@ -1,29 +1,15 @@
 import * as React from "react";
 import { useState } from "react";
 import { Meta } from "@storybook/react";
-import Checkbox from "../Checkbox";
+import Radio from "./Radio";
 
 export default {
-    title: "Components/Checkbox",
-    component: Checkbox,
-} as Meta<typeof Checkbox>;
+    title: "Components/Radio",
+    component: Radio,
+} as Meta<typeof Radio>;
 
-export const DefaultCheckbox = () => <Checkbox labelText="Check me" />;
-
-export const DisabledCheckbox = () => (
-    <Checkbox labelText="Check me" disabled />
+export const DefaultRadio = () => (
+    <Radio className="" labelClassName="" labelText="Check me" />
 );
 
-export const SizeCheckbox = () => (
-    <div>
-        <Checkbox size={"sm"} labelText="Small checkbox" />
-        <br />
-        <Checkbox size={"md"} labelText="Medium checkbox" />
-        <br />
-        <Checkbox size={"lg"} labelText="large checkbox" />
-        <br />
-        <Checkbox size={"xl"} labelText="Extra large checkbox" />
-        <br />
-        <Checkbox labelText="Check me" />
-    </div>
-);
+export const DisabledRadio = () => <Radio labelText="Check me" disabled />;
