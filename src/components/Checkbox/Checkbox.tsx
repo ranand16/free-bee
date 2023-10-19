@@ -16,22 +16,27 @@ const checkboxVariants = cva("", {
 });
 
 interface CheckboxProps
-    extends HTMLAttributes<HTMLElement>,
+    extends HTMLAttributes<HTMLInputElement>,
         VariantProps<typeof checkboxVariants> {
-    labelText: string;
+    labelText?: string;
     size?: "sm" | "md" | "lg" | "xl";
+    disabled?: boolean;
+    key?: string;
 }
 
 const Checkbox: FC<CheckboxProps> = ({
     id,
     size = "md",
     labelText,
+    disabled = false,
+    key,
     ...props
 }) => {
     return (
         <label
             className="w-full flex items-center gap-2 cursor-pointer select-none"
             htmlFor={id}
+            key={key}
         >
             <input
                 className={cn(
@@ -43,6 +48,7 @@ const Checkbox: FC<CheckboxProps> = ({
                 )}
                 type="checkbox"
                 id={id}
+                disabled={disabled}
                 {...props}
             />
             <svg
@@ -51,7 +57,7 @@ const Checkbox: FC<CheckboxProps> = ({
                     checkboxVariants({
                         size,
                         className:
-                            "absolute pointer-events-none rounded-[5px] border-text-input-hovered bg-white stroke-white fill-none peer-focus:border-accent-blue peer-checked:peer-focus:border-accent-blue peer-hover:border-text-input-hovered peer-checked:border-none peer-checked:focus:border-accent-blue-subtle peer-checked:focus:border-1 peer-checked:hover:text-text-input-hovered peer-checked:peer-hover:bg-accent-blue-subtle peer-checked:bg-brand-bold peer-hover:bg-text-input-hovered peer-hover:text-text-input-hovered  transition-colors duration-200 ease-in-out",
+                            "absolute pointer-events-none rounded-[5px] border-text-input-hovered bg-white stroke-white fill-none peer-focus:border-accent-blue peer-checked:peer-focus:border-accent-blue peer-hover:border-text-input-hovered peer-checked:border-none peer-checked:focus:border-accent-blue-subtle peer-checked:focus:border-1 peer-checked:hover:text-text-input-hovered peer-checked:peer-hover:bg-accent-blue-subtle peer-checked:bg-brand-bold peer-hover:bg-text-input-hovered peer-hover:text-text-input-hovered dark:peer-focus:border-focused-dark dark:peer-checked:peer-focus:border-focused-dark dark:peer-hover:border-primary dark:peer-checked:border-none dark:peer-checked:focus:border-focused-dark dark:peer-checked:hover:text-inverse dark:peer-checked:peer-hover:bg-accent-blue dark:peer-checked:bg-brand-bold-dark dark:peer-hover:bg-input-hovered dark:peer-hover:text-inverse peer-disabled:bg-white peer-disabled:peer-hover:bg-white transition-colors duration-200 ease-in-out",
                     })
                 )}
             >
@@ -61,7 +67,7 @@ const Checkbox: FC<CheckboxProps> = ({
                     className="fill-white"
                 ></path>
             </svg>
-            <span>{labelText}</span>
+            {labelText && <span>{labelText}</span>}
         </label>
     );
 };

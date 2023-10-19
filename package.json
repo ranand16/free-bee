@@ -23,6 +23,7 @@
         "@rollup/plugin-commonjs": "^25.0.4",
         "@rollup/plugin-node-resolve": "^15.2.0",
         "@rollup/plugin-typescript": "^11.1.2",
+        "@storybook/addon-a11y": "^7.4.6",
         "@storybook/addon-essentials": "^7.3.1",
         "@storybook/addon-interactions": "^7.3.2",
         "@storybook/addon-links": "^7.3.1",

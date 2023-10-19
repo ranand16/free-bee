@@ -86,6 +86,7 @@ NOTE: We will be mentioning only those values which are being used in this proje
 | Banner          | Completed   |
 | Text Field      | Completed   |
 | Checkbox        | Completed   |
+| Group Checkbox  | Not Started |
 | Loader          | In Progress |
 | Tooltip         | In Progress |
 | PopUp           | In Progress |
