@@ -63,6 +63,9 @@ module.exports = {
                 ...theme.colors.default.border,
                 ...theme.colors.default.others,
             },
+            borderColor: {
+                ...theme.colors.default.border,
+            },
             fontSize: {
                 base: font_base + "px",
                 h1: h1 + "rem",
@@ -111,6 +114,9 @@ module.exports = {
             },
             transitionProperty: {
                 bgColor: "background-color",
+            },
+            scale: {
+                "radio-scale": "0.583",
             },
         },
     },
