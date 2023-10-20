@@ -45,7 +45,8 @@
                 "discovery": "#8F7EE7",
                 "information": "#388BFF",
                 "bold": "#738496",
-                "input-hovered": "#091E4224"
+                "input-hovered": "#091E4224",
+                "brand-bold": "#0C66E4"
             },
             "icon": {
                 "default": "#44546F",

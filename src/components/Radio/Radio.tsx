@@ -19,6 +19,7 @@ interface RadioButtonProps extends InputHTMLAttributes<HTMLInputElement> {
     // VariantProps<typeof radioButtonVariants> {
     labelText?: string;
     disabled?: boolean;
+    labelClassName?: string;
     key?: string;
 }
 
@@ -26,12 +27,14 @@ const Checkbox: FC<RadioButtonProps> = ({
     id,
     labelText,
     disabled = false,
+    className,
+    labelClassName,
     key,
     ...props
 }) => {
     return (
         <label
-            className="w-full flex items-center gap-2 cursor-pointer select-none"
+            className="w-full flex items-center gap-2 cursor-pointer select-none relative"
             htmlFor={id}
             key={key}
         >
@@ -42,13 +45,20 @@ const Checkbox: FC<RadioButtonProps> = ({
                 //             "peer relative appearance-none cursor-pointer border-none shrink-0 rounded-[5px] checked:bg-none checked:text-none checked:text-transparent checked:border-0",
                 //     })
                 // )}
-                className=""
+                className={cn(
+                    className,
+                    "scale-[0.583] transform-gpu relative m-0 bg-white border-2 rounded-full border-input-hovered checked:border-brand-bold checked:bg-brand-bold flex items-center justify-center w-6 h-6 appearance-none outline-none after:opacity-0 checked:after:opacity-100 after:w-[6.85714px] after:h-[6.85714px] after:absolute after:bg-white after:content-[''] after:rounded-full"
+                )}
                 type="radio"
                 id={id}
                 disabled={disabled}
                 {...props}
             />
-            {labelText && <span>{labelText}</span>}
+            {labelText && (
+                <span className={cn(labelClassName, "disabled:")}>
+                    {labelText}
+                </span>
+            )}
         </label>
     );
 };
