@@ -47,7 +47,7 @@ const Checkbox: FC<RadioButtonProps> = ({
                 // )}
                 className={cn(
                     className,
-                    "scale-[0.583] transform-gpu relative m-0 bg-white border-2 rounded-full border-input-hovered checked:border-brand-bold checked:bg-brand-bold flex items-center justify-center w-6 h-6 appearance-none outline-none after:opacity-0 checked:after:opacity-100 after:w-[6.85714px] after:h-[6.85714px] after:absolute after:bg-white after:content-[''] after:rounded-full"
+                    "scale-[0.583] transform-gpu relative m-0 bg-white border-2 rounded-full border-input-hovered checked:bg-none checked:border-brand-bold checked:bg-brand-bold flex items-center justify-center w-6 h-6 appearance-none outline-none after:opacity-0 checked:after:opacity-100 after:w-[6.85714px] after:h-[6.85714px] after:absolute after:dark:bg-black after:bg-white after:content-[''] after:checked:content-[''] after:rounded-full after:checked:shadow-radio-box"
                 )}
                 type="radio"
                 id={id}
@@ -55,7 +55,7 @@ const Checkbox: FC<RadioButtonProps> = ({
                 {...props}
             />
             {labelText && (
-                <span className={cn(labelClassName, "disabled:")}>
+                <span className={cn(labelClassName, "dark:text-white")}>
                     {labelText}
                 </span>
             )}
