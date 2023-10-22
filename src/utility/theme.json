@@ -401,7 +401,8 @@
                 "information-bold-hovered": "#CCE0FF"
             },
             "surface": {
-                "primary": "#1D2125",
+                "surface-primary": "#1D2125",
+
                 "hovered": "#22272B",
                 "pressed": "#282E33",
                 "overlay": "#282E33",
