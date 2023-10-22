@@ -197,6 +197,7 @@
                 "neutral-bold-hovered": "#B6C2CF",
                 "neutral-hovered": "#A6C5E229",
                 "selected-pressed": "#0055CC",
+                "success-bold-hovered": "#7EE2B8",
 
                 "blue-bold": "#1D7AFC",
                 "blue-bolder-hovered": "#579DFF",
@@ -269,7 +270,6 @@
                 "success-hovered": "#164B35",
                 "success-pressed": "#216E4E",
                 "success-bold-old": "#4BCE97",
-                "success-bold-hovered": "#7EE2B8",
                 "success-bold-pressed": "#BAF3DB",
                 "discovery": "#2B2451",
                 "discovery-hovered": "#352C63",

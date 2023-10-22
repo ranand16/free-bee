@@ -1,19 +1,22 @@
 import * as React from "react";
-import { ButtonHTMLAttributes, forwardRef } from "react";
+import { LabelHTMLAttributes, forwardRef } from "react";
 import { cn } from "../../utility/functions";
 
-interface ToggleProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ToggleProps extends LabelHTMLAttributes<HTMLLabelElement> {
     label: string;
     disabled?: boolean;
+    checked: boolean;
+    toggle: React.MouseEventHandler<HTMLElement>;
 }
 
 const Button = forwardRef<HTMLLabelElement, ToggleProps>(
-    ({ label, className, disabled, id, ...props }, ref) => {
+    ({ label, className, checked, disabled, id, toggle, ...props }, ref) => {
         return (
             <label
                 ref={ref}
+                data-checked={checked}
                 className={cn(
-                    "cursor-pointer box-content inline-block p-[2px] m-[2px] bg-neutral-bold rounded-2xl border-2 border-transparent h-4 relative w-8 text-inverse before:bg-inverse before:rounded-full before:contents-[''] before:absolute before:bottom-1 before:h-3 before:w-3 before:left-1",
+                    "hover:bg-neutral-bold-hovered hover:data-[checked=true]:bg-success-bold-hovered focus-within:border-focus-dark data-[checked=true]:bg-accent-green-bolder before:transform before:duration-200 before:ease-in-out   data-[checked=true]:before:text-inverse data-[checked=true]:before:translate-x-4 data-[checked=true]:text-inverse cursor-pointer box-content inline-block p-[2px] m-[2px] bg-neutral-bold rounded-2xl border-2 border-transparent h-4 relative w-8 text-inverse before:bg-inverse before:rounded-full before:contents-[''] before:absolute before:bottom-1 before:h-3 before:w-3 before:left-1",
                     className
                 )}
                 id={id}
@@ -21,6 +24,7 @@ const Button = forwardRef<HTMLLabelElement, ToggleProps>(
                 <input
                     type="checkbox"
                     className="opacity-0 border-none m-0 p-0"
+                    onClick={toggle}
                 />
                 <span
                     aria-hidden="true"
@@ -54,7 +58,7 @@ const Button = forwardRef<HTMLLabelElement, ToggleProps>(
                         <path
                             d="M15.185 7.4l-3.184 3.185-3.186-3.186a.507.507 0 00-.712.003l-.7.701a.496.496 0 00-.004.712l3.185 3.184L7.4 15.185a.507.507 0 00.004.712l.7.7c.206.207.516.2.712.004l3.186-3.185 3.184 3.185a.507.507 0 00.712-.004l.701-.7a.496.496 0 00.003-.712l-3.186-3.186 3.186-3.184a.507.507 0 00-.003-.712l-.7-.7a.508.508 0 00-.36-.153.5.5 0 00-.353.15z"
                             fill="currentColor"
-                            fill-rule="evenodd"
+                            fillRule="evenodd"
                         ></path>
                     </svg>
                 </span>
