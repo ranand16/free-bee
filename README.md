@@ -87,7 +87,7 @@ NOTE: We will be mentioning only those values which are being used in this proje
 | Text Field      | Completed   |
 | Checkbox        | Completed   |
 | Radio           | Completed   |
-| Toggle          | In Progress |
+| Toggle          | Completed   |
 | Group Checkbox  | Not Started |
 | Loader          | In Progress |
 | Tooltip         | In Progress |
