@@ -62,6 +62,7 @@ module.exports = {
                 ...theme.colors.default.icons,
                 ...theme.colors.default.border,
                 ...theme.colors.default.others,
+                ...theme.colors.default.surface,
             },
             borderColor: {
                 ...theme.colors.default.border,
