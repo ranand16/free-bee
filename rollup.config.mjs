@@ -33,7 +33,12 @@ export default [
             commonjs(),
             typescript(),
             postcss({
+                config: {
+                    path: "./postcss.config.js",
+                },
                 extensions: [".css"],
+                minimize: true,
+                extract: "lib/lib.css",
             }),
         ],
     },
