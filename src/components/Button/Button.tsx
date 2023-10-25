@@ -1,8 +1,8 @@
-import Loader from "../Loader/Loader";
 import { cva, VariantProps } from "class-variance-authority";
 import * as React from "react";
 import { ButtonHTMLAttributes, forwardRef } from "react";
 import { cn } from "../../utility/functions";
+import Loader from "../Loader/Loader";
 
 const buttonVariants = cva(
     "flex text-active max-w-100 min-w-[122px] justify-center items-center text-sm font-medium rounded px-2.5",
@@ -29,7 +29,7 @@ const buttonVariants = cva(
     }
 );
 
-interface ButtonProps
+export interface ButtonProps
     extends ButtonHTMLAttributes<HTMLButtonElement>,
         VariantProps<typeof buttonVariants> {
     label: string;

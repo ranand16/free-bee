@@ -29,7 +29,7 @@ const flagVariants = cva(
  * This component will have a dynamic icon input and a dynamic close button.
  */
 
-interface FlagProps
+export interface FlagProps
     extends HTMLAttributes<HTMLDivElement>,
         VariantProps<typeof flagVariants> {
     closebtn: boolean;

@@ -10,7 +10,7 @@ export default {
 } as Meta<typeof Expander>;
 
 export const DefaultExpander = () => {
-    const expanderBtnRef = useRef(null);
+    const expanderBtnRef = useRef<any>(null);
     return (
         <Expander ref={expanderBtnRef}>
             <p>

@@ -15,7 +15,8 @@ import { cn } from "../../utility/functions";
 //     },
 // });
 
-interface RadioButtonProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface RadioButtonProps
+    extends InputHTMLAttributes<HTMLInputElement> {
     // VariantProps<typeof radioButtonVariants> {
     labelText?: string;
     disabled?: boolean;

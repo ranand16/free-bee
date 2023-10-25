@@ -1,8 +1,8 @@
 import { FC, forwardRef } from "react";
 import BlanketComponent from "../BlanketComponent/BlanketComponent";
 import { VariantProps, cva } from "class-variance-authority";
-import Button from "../Button";
 import { cn } from "../../utility/functions";
+import Button from "../Button";
 
 const modalVariants = cva(
     "bg-white rounded-[3px] w-1/3 m-auto border border-solid border-accent-yellow-subtle max-h-500:min-h-[200px] min-h-[238px] ",
@@ -20,7 +20,7 @@ const modalVariants = cva(
 
 type IModalSize = "sm" | "md" | "lg" | "xl";
 
-interface ModalProps
+export interface ModalProps
     extends React.HTMLAttributes<HTMLDivElement>,
         VariantProps<typeof modalVariants> {
     size?: IModalSize;

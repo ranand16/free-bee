@@ -15,7 +15,7 @@ const checkboxVariants = cva("", {
     },
 });
 
-interface CheckboxProps
+export interface CheckboxProps
     extends HTMLAttributes<HTMLInputElement>,
         VariantProps<typeof checkboxVariants> {
     labelText?: string;
