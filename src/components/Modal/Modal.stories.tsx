@@ -11,7 +11,7 @@ export default {
 } as Meta<typeof Modal>;
 
 export const DefaultModal = () => {
-    const defaultModalRef = React.useRef(null);
+    const defaultModalRef = React.useRef<any>(null);
     const [defaultToggle, setDefaultToggle] = React.useState(false);
 
     const defaultModalPrimaryBtnCB = () => {
@@ -62,7 +62,7 @@ export const DefaultModal = () => {
 };
 
 export const SmallModal = () => {
-    const smallModalRef = React.useRef(null);
+    const smallModalRef = React.useRef<any>(null);
     const [smallModalToggle, setSmallModalToggle] = React.useState(false);
 
     const smallModalPrimaryBtnCB = () => {
@@ -112,7 +112,7 @@ export const SmallModal = () => {
 };
 
 export const MediumModal = () => {
-    const mdModalRef = React.useRef(null);
+    const mdModalRef = React.useRef<any>(null);
     const [mdModalToggle, setMdModalToggle] = React.useState(false);
 
     const mediumModalPrimaryBtnCB = () => {
@@ -161,7 +161,7 @@ export const MediumModal = () => {
 };
 
 export const LargeModal = () => {
-    const largeModalRef = React.useRef(null);
+    const largeModalRef = React.useRef<any>(null);
     const [largeModalToggle, setLargeModalToggle] = React.useState(false);
 
     const largeModalPrimaryBtnCB = () => {
@@ -211,7 +211,7 @@ export const LargeModal = () => {
 };
 
 export const ExtraLargeModal = () => {
-    const xlModalRef = React.useRef(null);
+    const xlModalRef = React.useRef<any>(null);
     const [xlModalToggle, setXlModalToggle] = React.useState(false);
 
     const xlModalPrimaryBtnCB = () => {

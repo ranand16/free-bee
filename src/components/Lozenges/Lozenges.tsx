@@ -31,7 +31,7 @@ const lozengesVariants = cva(
     }
 );
 
-interface LozengesProps
+export interface LozengesProps
     extends HTMLAttributes<HTMLDivElement>,
         VariantProps<typeof lozengesVariants> {
     text: string;

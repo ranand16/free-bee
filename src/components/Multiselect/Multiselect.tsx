@@ -2,7 +2,7 @@ import React, { useState, forwardRef } from "react";
 import Dropdown from "./Dropdown";
 import { MultiselectItem } from "./Multiselect.stories";
 
-interface MultiselectProps {
+export interface MultiselectProps {
     items: MultiselectItem[];
     selectedItems: MultiselectItem[];
     setSelected: React.Dispatch<React.SetStateAction<MultiselectItem[]>>;

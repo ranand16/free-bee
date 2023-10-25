@@ -25,7 +25,6 @@ if (theme.fonts.font_family.secondary) {
 module.exports = {
     darkMode: "class",
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
-    safelist: [{ pattern: /^swiper-/ }],
     theme: {
         screens: {
             sm: "540px",
@@ -135,4 +134,5 @@ module.exports = {
             },
         }),
     ],
+    mode: "jit",
 };

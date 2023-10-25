@@ -20,7 +20,7 @@ const tooltipVariants = cva(
 
 // tipPosition can be "top" "right" "bottom" "left" "block-start" "block-end"
 
-interface TooltipProps
+export interface TooltipProps
     extends React.HTMLAttributes<HTMLDivElement>,
         VariantProps<typeof tooltipVariants> {
     peerClass: string;

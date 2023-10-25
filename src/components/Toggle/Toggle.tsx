@@ -2,7 +2,7 @@ import * as React from "react";
 import { LabelHTMLAttributes, forwardRef } from "react";
 import { cn } from "../../utility/functions";
 
-interface ToggleProps extends LabelHTMLAttributes<HTMLLabelElement> {
+export interface ToggleProps extends LabelHTMLAttributes<HTMLLabelElement> {
     label: string;
     disabled?: boolean;
     checked: boolean;
