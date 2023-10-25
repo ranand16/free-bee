@@ -14,7 +14,7 @@ const TagVariants = cva("", {
     },
 });
 
-interface InputFieldProps
+export interface InputFieldProps
     extends InputHTMLAttributes<HTMLInputElement>,
         VariantProps<typeof TagVariants> {
     label?: string;

@@ -49,7 +49,7 @@ const statusVariants = cva("absolute", {
     },
 });
 
-interface AvatarProps
+export interface AvatarProps
     extends React.ImgHTMLAttributes<HTMLImageElement>,
         VariantProps<typeof avatarVariants> {
     status?: boolean;
@@ -98,3 +98,4 @@ const Avatar = ({
 };
 
 export default Avatar;
+export { Avatar };
