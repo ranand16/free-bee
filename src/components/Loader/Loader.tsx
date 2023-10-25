@@ -27,3 +27,4 @@ const Loader = ({ className: cln }: LoaderProps) => {
 };
 
 export default Loader;
+export { Loader };
