@@ -25,4 +25,9 @@ module.exports = {
         name: "@storybook/react-webpack5",
         options: {},
     },
+    previewHead: (head) => `
+    ${head}
+    ${'<link rel="stylesheet" href="./sb-common-assets/styles/tailwind.css" />'} 
+    `,
 };
+//  previewHead is being used to add a static file(not statci initially, but it is postcssed and then put into this location using package json build-storybook command )
