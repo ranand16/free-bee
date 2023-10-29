@@ -1,12 +1,11 @@
+import * as React from "react";
 import { Meta } from "@storybook/react";
-import Expander from ".";
 import { useRef } from "react";
+import { Expander } from "./Expander";
 
 export default {
     title: "Components/Expander",
     component: Expander,
-    tags: ["autodocs"],
-    argTypes: {},
 } as Meta<typeof Expander>;
 
 export const DefaultExpander = () => {
