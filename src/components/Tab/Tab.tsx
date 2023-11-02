@@ -1,30 +1,16 @@
 import * as React from "react";
-import { HTMLAttributes, ChangeEventHandler, forwardRef } from "react";
+import { HTMLAttributes, forwardRef } from "react";
 import { cva, VariantProps } from "class-variance-authority";
 import { cn } from "../../utility/functions";
 
-const TagVariants = cva("", {
-    variants: {
-        variant: {
-            default: "",
-        },
-    },
-    defaultVariants: {
-        variant: "default",
-    },
-});
+export interface TabProps extends HTMLAttributes<HTMLDivElement> {}
 
-export interface InputFieldProps
-    extends HTMLAttributes<HTMLDivElement>,
-        VariantProps<typeof TagVariants> {
-    onChange: ChangeEventHandler<HTMLDivElement>;
-}
+const Tab = ({ children, className }: TabProps) => {
+    return (
+        <div className={cn("tab-item cursor-pointer", className)}>
+            {children}
+        </div>
+    );
+};
 
-const Tabs = forwardRef<HTMLInputElement, InputFieldProps>(
-    ({ onChange }, ref) => {
-        // const
-        return <div className={""}></div>;
-    }
-);
-
-export default Tabs;
+export default Tab;
