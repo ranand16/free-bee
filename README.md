@@ -93,6 +93,7 @@ NOTE: We will be mentioning only those values which are being used in this proje
 | Tooltip         | In Progress |
 | PopUp           | In Progress |
 | Comments        | In Progress |
+| Breadcrumbs     | In Progress |
 
 <!-- ## What are we learning while building this styleguide/design system
 
