@@ -19,7 +19,7 @@ const TABS = {
 
 export const Standard = () => {
     const [selectedTab, setSelectedTab] = React.useState("tab1");
-    const tabsRef = React.useRef<null | HTMLDivElement>(null);
+    const tabsRef = React.useRef<any>(null);
 
     return (
         <Tabs

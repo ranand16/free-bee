@@ -30,15 +30,14 @@ const Tabs = forwardRef<HTMLDivElement, TabsProps>(
         }, [selected]);
 
         const tabClick = (e: any) => {
-            if (ref && ref?.current) {
-                console.log(
-                    "ref current ",
-                    document
-                        .getElementById(id as string)
-                        ?.getElementsByClassName("tab-item")
-                );
-                console.log("ref current ", e.target);
-            }
+            if (!ref) return;
+            console.log(
+                "ref current ",
+                document
+                    .getElementById(id as string)
+                    ?.getElementsByClassName("tab-item")
+            );
+            console.log("ref current ", e.target);
         };
         return (
             <div id={id} ref={ref} className={""} onClick={tabClick}>

@@ -64,7 +64,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "storybook": "storybook dev -p 6006",
         "build-storybook": "storybook build && postcss src/**/*.css --base src --dir storybook-static/sb-common-assets",
-        "build": "rollup -c",
+        "build": "tsc && rollup -c",
         "prepublishOnly": "npm run build",
         "build-ts": "tsc",
         "predeploy": "npm run build-storybook",
