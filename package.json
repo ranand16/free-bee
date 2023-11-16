@@ -1,7 +1,7 @@
 {
     "name": "free-bee",
-    "version": "0.10.0",
-    "type": "commonjs",
+    "version": "0.11.0",
+    "type": "module",
     "description": "",
     "dependencies": {
         "@emotion/react": "^11.11.1",
