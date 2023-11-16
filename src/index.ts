@@ -1,7 +1,8 @@
-import Button from "./components/Button";
-import Popup from "./components/Popup";
 import Avatar from "./components/Avatar";
 import Banner from "./components/Banner";
+import BlanketComponent from "./components/BlanketComponent";
+import Breadcrumbs from "./components/Breadcrumbs";
+import Button from "./components/Button";
 import Checkbox from "./components/Checkbox";
 import Comment from "./components/Comment";
 import Expander from "./components/Expander";
@@ -11,17 +12,20 @@ import Loader from "./components/Loader";
 import Lozenges from "./components/Lozenges";
 import Modal from "./components/Modal";
 import Multiselect from "./components/Multiselect";
+import Popup from "./components/Popup";
 import Radio from "./components/Radio";
+import Tab from "./components/Tab";
 import Tag from "./components/Tag";
 import TextField from "./components/TextField";
 import Toggle from "./components/Toggle";
 import Tooltip from "./components/Tooltip";
 
 export {
-    Button,
-    Popup,
     Avatar,
     Banner,
+    BlanketComponent,
+    Breadcrumbs,
+    Button,
     Checkbox,
     Comment,
     Expander,
@@ -31,7 +35,9 @@ export {
     Lozenges,
     Modal,
     Multiselect,
+    Popup,
     Radio,
+    Tab,
     Tag,
     TextField,
     Toggle,
