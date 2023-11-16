@@ -21,23 +21,18 @@ export interface TabsProps
 }
 
 const Tabs = forwardRef<HTMLDivElement, TabsProps>(
-    ({ id, onTabChange, children }, ref) => {
-        const [selected, setSelected] = React.useState(0);
-
-        React.useEffect(() => {
-            console.log("tab item :: ");
-            onTabChange(selected);
-        }, [selected]);
-
+    ({ id, onTabChange, children }, ref: any) => {
         const tabClick = (e: any) => {
             if (!ref) return;
             console.log(
                 "ref current ",
-                document
-                    .getElementById(id as string)
-                    ?.getElementsByClassName("tab-item")
+                // document
+                //     .getElementById(id as string)
+                ref?.current?.getElementsByClassName("tab-item")
             );
-            console.log("ref current ", e.target);
+            console.log("ref target e.target: ", e.target);
+            console.log("ref target: ", ref.current);
+            // onTabChange(selected);
         };
         return (
             <div id={id} ref={ref} className={""} onClick={tabClick}>

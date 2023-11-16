@@ -11,12 +11,6 @@ export default {
     argTypes: {},
 } as Meta<typeof Tabs>;
 
-const TABS = {
-    tab1: <div></div>,
-    tab2: <div></div>,
-    tab3: <div></div>,
-};
-
 export const Standard = () => {
     const [selectedTab, setSelectedTab] = React.useState("tab1");
     const tabsRef = React.useRef<any>(null);
@@ -35,13 +29,41 @@ export const Standard = () => {
             id={"tabs-test"}
         >
             <TabList>
-                <Tab>Tab 1</Tab>
-                <Tab>Tab 2</Tab>
-                <Tab>Tab 3</Tab>
+                {TABS.map((tab) => (
+                    <Tab selected={selectedTab == tab["id"]} id={tab["id"]}>
+                        {tab["head"]}
+                    </Tab>
+                ))}
             </TabList>
-            <TabPanel>ONE</TabPanel>
-            <TabPanel>TWO</TabPanel>
-            <TabPanel>THREE</TabPanel>
+            {TABS.map((tab) => (
+                <TabPanel
+                    selected={selectedTab == tab["id"]}
+                    id={tab["contentId"]}
+                >
+                    {tab["content"]}
+                </TabPanel>
+            ))}
         </Tabs>
     );
 };
+
+const TABS = [
+    {
+        id: "tab1",
+        head: "Tab 1",
+        contentId: "tab1-content",
+        content: <div>Tab 1 content here</div>,
+    },
+    {
+        id: "tab2",
+        head: "Tab 2",
+        contentId: "tab2-content",
+        content: <div>Tab content 2 </div>,
+    },
+    {
+        id: "tab3",
+        head: "Tab 3",
+        contentId: "tab3-content",
+        content: <div>Tab content 3</div>,
+    },
+];

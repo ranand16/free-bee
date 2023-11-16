@@ -1,22 +1,22 @@
-import { FC, useState, useEffect, forwardRef } from "react";
+import { FC, useState, useEffect, forwardRef, ForwardedRef } from "react";
 
 export interface ExpanderProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 const Expander = forwardRef<HTMLDivElement, ExpanderProps>(
-    ({ children }, ref) => {
+    ({ children }, ref: any) => {
         const [showMoreToggle, setShowMoreToggle] = useState(false);
         useEffect(() => {
             console.log(showMoreToggle);
 
-            // console.log(ref);
-            // console.log(ref?.current.firstChild);
-            // if (showMoreToggle && ref?.current.firstChild) {
-            //     ref?.current.firstChild.classList.remove("h-0");
-            //     ref?.current.firstChild.classList.add("h-auto");
-            // } else {
-            //     ref?.current.firstChild.classList.add("h-0");
-            //     ref?.current.firstChild.classList.remove("h-auto");
-            // }
+            console.log(ref);
+            console.log(ref?.current.firstChild);
+            if (showMoreToggle && ref?.current.firstChild) {
+                ref?.current.firstChild.classList.remove("h-0");
+                ref?.current.firstChild.classList.add("h-auto");
+            } else {
+                ref?.current.firstChild.classList.add("h-0");
+                ref?.current.firstChild.classList.remove("h-auto");
+            }
         }, [showMoreToggle]);
 
         return (
