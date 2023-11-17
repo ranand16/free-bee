@@ -1,6 +1,6 @@
 {
     "name": "free-bee",
-    "version": "0.16.0",
+    "version": "0.18.0",
     "description": "",
     "dependencies": {
         "@emotion/react": "^11.11.1",
@@ -67,6 +67,7 @@
         "buildcss": "npx tailwindcss-cli build -o public/css/app.css",
         "buildcss-minify": "css-minify --dir public/css --output storybook-static/sb-common-assets",
         "deploy-storybook": "gh-pages -d storybook-static",
+        "builddepstorybook": "npm run build-storybook && npm run buildcss && npm run buildcss-minify && npm run deploy-storybook",
         "test": "echo \"Error: no test specified\" && exit 1",
         "storybook": "storybook dev -p 6006",
         "build": "tsc && rollup -c",
