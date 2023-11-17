@@ -102,10 +102,14 @@ Obviously once you read the approach and other things mentioned above you will g
 
 ## Storybook Deployment to github pages
 
--   run `npm run build-storybook` with `"type": "module"` in package json.
--   run `npm run buildcss` with `"type": "commonjs"` in package json.
--   run `npm run buildcss-minify` with `"type": "commonjs"` in package json.
--   run `npm run deploy-storybook` with `"type": "commonjs"` in package json.
+-   run `npm run build-storybook`.
+-   run `npm run buildcss`.
+-   run `npm run buildcss-minify`.
+-   run `npm run deploy-storybook`.
+
+## Publish to NPM
+
+-   run `npm publish`.
 
 ## Credits
 
