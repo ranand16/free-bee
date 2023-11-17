@@ -2,7 +2,7 @@ import * as React from "react";
 import { Meta } from "@storybook/react";
 import Breadcrumbs from "./Breadcrumbs";
 import AccessibilityIcon from "@mui/icons-material/Accessibility";
-import BreadcrumbItem from "./BreadcrumbItem";
+import BreadcrumbItem from "../BreadcrumbItem/BreadcrumbItem";
 import Button from "../Button";
 
 export default {

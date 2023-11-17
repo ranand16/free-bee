@@ -1,7 +1,8 @@
 export { default as Avatar } from "./Avatar";
 export { default as Banner } from "./Banner";
 export { default as BlanketComponent } from "./BlanketComponent";
-export { default as Breadcrumbs, BreadcrumbItem } from "./Breadcrumbs";
+export { default as Breadcrumbs } from "./Breadcrumbs";
+export { default as BreadcrumbItem } from "./BreadcrumbItem";
 export { default as Button } from "./Button";
 export { default as Checkbox } from "./Checkbox";
 export { default as Comment } from "./Comment";
