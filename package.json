@@ -1,7 +1,6 @@
 {
     "name": "free-bee",
-    "version": "0.17.0",
-    "type": "module",
+    "version": "0.16.0",
     "description": "",
     "dependencies": {
         "@emotion/react": "^11.11.1",
