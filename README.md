@@ -5,6 +5,7 @@ free-bee
 ## Demo link:
 
 Access our site at [free-bee-design-systems.netlify.app](https://free-bee-design-systems.netlify.app/)
+Access our site at [Free Bee](https://ranand16.github.io/free-bee/)
 
 ## Table of Content:
 
@@ -98,6 +99,13 @@ NOTE: We will be mentioning only those values which are being used in this proje
 <!-- ## What are we learning while building this styleguide/design system
 
 Obviously once you read the approach and other things mentioned above you will get to know what someone would learn in course of building a design system. Let's try to understand: -->
+
+## Storybook Deployment to github pages
+
+-   run `npm run build-storybook` with `"type": "module"` in package json.
+-   run `npm run buildcss` with `"type": "commonjs"` in package json.
+-   run `npm run buildcss-minify` with `"type": "commonjs"` in package json.
+-   run `npm run deploy-storybook` with `"type": "commonjs"` in package json.
 
 ## Credits
 

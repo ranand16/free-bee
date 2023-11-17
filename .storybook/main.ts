@@ -27,7 +27,7 @@ module.exports = {
     },
     previewHead: (head) => `
     ${head}
-    ${'<link rel="stylesheet" href="./sb-common-assets/styles/tailwind.css" />'} 
+    ${'<link rel="stylesheet" href="./sb-common-assets/app.min.css" />'} 
     `,
 };
 //  previewHead is being used to add a static file(not statci initially, but it is postcssed and then put into this location using package json build-storybook command )

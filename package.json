@@ -1,7 +1,7 @@
 {
     "name": "free-bee",
-    "version": "0.10.0",
-    "type": "commonjs",
+    "version": "0.11.0",
+    "type": "module",
     "description": "",
     "dependencies": {
         "@emotion/react": "^11.11.1",
@@ -64,15 +64,16 @@
         "react-dom": "^18.2.0"
     },
     "scripts": {
+        "build-storybook": "storybook build",
+        "buildcss": "npx tailwindcss-cli build -o public/css/app.css",
+        "buildcss-minify": "css-minify --dir public/css --output storybook-static/sb-common-assets",
+        "deploy-storybook": "gh-pages -d storybook-static",
         "test": "echo \"Error: no test specified\" && exit 1",
         "storybook": "storybook dev -p 6006",
-        "build-storybook": "storybook build && npm run buildcss",
         "build": "tsc && rollup -c",
-        "buildcss": "npx tailwindcss-cli build -o public/css/app.css && css-minify --dir public/css --output storybook-static/sb-common-assets",
         "prepublishOnly": "npm run build",
         "build-ts": "tsc",
-        "predeploy": "npm run build-storybook",
-        "deploy-storybook": "npm run build-storybook && gh-pages -d storybook-static"
+        "predeploy": "npm run build-storybook"
     },
     "keywords": [
         "stroybook",
