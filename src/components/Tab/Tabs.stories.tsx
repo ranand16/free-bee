@@ -18,12 +18,7 @@ export const Standard = () => {
     return (
         <Tabs
             onTabChange={(selected) => {
-                console.log("selected tab:: ", selected);
-                console.log(
-                    "tabpanel",
-                    tabsRef.current
-                    // .getElementsByClassname("tabpanel")
-                );
+                setSelectedTab(selected.id);
             }}
             ref={tabsRef}
             id={"tabs-test"}
@@ -52,13 +47,13 @@ const TABS = [
         id: "tab1",
         head: "Tab 1",
         contentId: "tab1-content",
-        content: <div>Tab 1 content here</div>,
+        content: <div>Tab content 1</div>,
     },
     {
         id: "tab2",
         head: "Tab 2",
         contentId: "tab2-content",
-        content: <div>Tab content 2 </div>,
+        content: <div>Tab content 2</div>,
     },
     {
         id: "tab3",

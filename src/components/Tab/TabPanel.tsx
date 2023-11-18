@@ -8,7 +8,11 @@ export interface TabPanelProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const TabPanel = ({ children, className, selected }: TabPanelProps) => {
-    return <div className={cn("tabpanel", className)}>{children}</div>;
+    return selected ? (
+        <div className={cn("tabpanel", className)}>{children}</div>
+    ) : (
+        <></>
+    );
 };
 
 export default TabPanel;
