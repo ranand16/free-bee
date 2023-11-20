@@ -7,9 +7,16 @@ export interface TabProps extends HTMLAttributes<HTMLDivElement> {
     selected: Boolean;
 }
 
-const Tab = ({ children, className, id }: TabProps) => {
+const Tab = ({ children, selected, className, id, ...props }: TabProps) => {
     return (
-        <div className={cn("tab-item cursor-pointer", className)} id={id}>
+        <div
+            className={cn(
+                "tab-item cursor-pointer leading-7 m-0 py-1 px-2",
+                className
+            )}
+            id={id}
+            {...props}
+        >
             {children}
         </div>
     );

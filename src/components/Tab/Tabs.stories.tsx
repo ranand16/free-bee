@@ -4,6 +4,7 @@ import Tabs from "./Tabs";
 import Tab from "./Tab";
 import TabList from "./TabList";
 import TabPanel from "./TabPanel";
+import { cn } from "../../utility/functions";
 
 export default {
     title: "Components/Tabs",
@@ -25,7 +26,15 @@ export const Standard = () => {
         >
             <TabList>
                 {TABS.map((tab) => (
-                    <Tab selected={selectedTab == tab["id"]} id={tab["id"]}>
+                    <Tab
+                        selected={selectedTab == tab["id"]}
+                        className={cn(
+                            selectedTab == tab["id"]
+                                ? "relative whitespace-nowrap overflow-hidden text-ellipsis after:w-auto after:content-[''] after:absolute after:rounded-sm after:bottom-0 after:m-0 after:left-2 after:right-2 after:border-b-2 after:border-bold"
+                                : ""
+                        )}
+                        id={tab["id"]}
+                    >
                         {tab["head"]}
                     </Tab>
                 ))}
