@@ -17,22 +17,14 @@ const TabsVariants = cva("", {
 export interface TabsProps
     extends HTMLAttributes<HTMLDivElement>,
         VariantProps<typeof TabsVariants> {
-    onTabChange: (selected: number) => void;
+    onTabChange: (selected: any) => void;
 }
 
 const Tabs = forwardRef<HTMLDivElement, TabsProps>(
     ({ id, onTabChange, children }, ref: any) => {
         const tabClick = (e: any) => {
             if (!ref) return;
-            console.log(
-                "ref current ",
-                // document
-                //     .getElementById(id as string)
-                ref?.current?.getElementsByClassName("tab-item")
-            );
-            console.log("ref target e.target: ", e.target);
-            console.log("ref target: ", ref.current);
-            // onTabChange(selected);
+            onTabChange(e.target);
         };
         return (
             <div id={id} ref={ref} className={""} onClick={tabClick}>
