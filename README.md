@@ -89,7 +89,7 @@ NOTE: We will be mentioning only those values which are being used in this proje
 | Checkbox        | Completed   |
 | Radio           | Completed   |
 | Toggle          | Completed   |
-| Tabs            | In Progress |
+| Tabs            | Completed   |
 | Group Checkbox  | Not Started |
 | Loader          | In Progress |
 | Tooltip         | In Progress |
