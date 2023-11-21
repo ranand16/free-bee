@@ -116,6 +116,7 @@ const theme = {
                 inverse: "#1D2125",
                 "accent-blue": "#85B8FF",
                 logo: "#172B4D",
+                selectedtab: "#0C66E4",
 
                 "accent-lime": "#B3DF72",
                 "accent-lime-bolder": "#D3F1A7",
