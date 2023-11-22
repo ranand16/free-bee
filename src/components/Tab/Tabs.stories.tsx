@@ -29,14 +29,10 @@ export const Standard = () => {
                 {TABS.map((tab) => (
                     <Tab
                         selected={selectedTab == `#${tab["id"]}`}
-                        className={cn(
-                            selectedTab == `#${tab["id"]}`
-                                ? "after:w-auto after:content-[''] after:absolute after:rounded-sm after:bottom-0 after:m-0 after:left-2 after:right-2 after:border-b-2 after:border-brand-bold  after:hover:border-b-2 after:hover:border-brand-bold"
-                                : ""
-                        )}
                         aria-selected={selectedTab == `#${tab["id"]}`}
                         aria-controls={tab["id"]}
                         href={`#${tab["id"]}`}
+                        onClick={(e) => e.preventDefault()}
                     >
                         {tab["head"]}
                     </Tab>
@@ -48,7 +44,9 @@ export const Standard = () => {
                         selected={selectedTab == `#${tab["id"]}`}
                         id={tab["id"]}
                     >
-                        {tab["content"]}
+                        {/* Your content starts here */}
+                        <span className="dark:text-white">{tab["content"]}</span>
+                        {/* Your content ends here */}
                     </TabPanel>
                 ))}
             </TabBody>
