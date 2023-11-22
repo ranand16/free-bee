@@ -9,7 +9,7 @@ const TabList = ({ children, className }: TabListProps) => {
         <header>
             <nav
                 className={cn(
-                    "flex p-0 m-0 relative font-medium before:content-[''] before:absolute before:m-0 before:bottom-0 before:left-2 before:right-2 before:h-[2px] before:rounded-sm before:bg-default-bold-hovered",
+                    "flex p-0 m-0 relative font-medium before:content-[''] before:absolute before:m-0 before:bottom-0 before:left-2 before:right-2 before:h-[2px] before:rounded-sm before:bg-default-bold-hovered dark:before:bg-neutral-hovered",
                     className
                 )}
             >
