@@ -11,6 +11,7 @@ export { default as Flags } from "./Flags";
 export { default as InputField } from "./InputField";
 export { default as Loader } from "./Loader";
 export { default as Lozenges } from "./Lozenges";
+export { default as Menu } from "./Menu";
 export { default as Modal } from "./Modal";
 export { default as Multiselect } from "./Multiselect";
 export { default as Popup } from "./Popup";
