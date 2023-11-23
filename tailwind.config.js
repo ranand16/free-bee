@@ -10,6 +10,7 @@ const theme = {
                 active: "#09326C",
                 shadow1: "#091E4224",
                 shadow2: "#091E424F",
+                shadow3: "#091E4226",
             },
             link: {
                 primary: "#579DFF",
@@ -552,6 +553,7 @@ module.exports = {
                     "var(--overlay, 0 4px 8px -2px rgba(9, 30, 66, 0.25), 0 0 1px rgba(9, 30, 66, 0.31))",
                 flag: `0 20px 32px -8px ${theme.colors.default.theme_color.shadow2},0 0 1px ${theme.colors.default.theme_color.shadow2}`,
                 modal: `0px 8px 12px ${theme.colors.default.theme_color.shadow1}, 0px 0px 1px ${theme.colors.default.theme_color.shadow2}`,
+                menu: `0px 8px 12px ${theme.colors.default.theme_color.shadow3}, 0px 0px 1px ${theme.colors.default.theme_color.shadow2},0px 4px 8px rgba(9, 30, 66, 0.25), 0px 0px 1px rgba(9, 30, 66, 0.31))`,
             },
             rotate: {
                 310: "310deg",
