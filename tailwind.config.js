@@ -48,6 +48,7 @@ const theme = {
                 bold: "#738496",
                 "input-hovered": "#091E4224",
                 "brand-bold": "#0C66E4",
+                "section-separator": "#091e4214",
             },
             icon: {
                 default: "#44546F",
@@ -555,7 +556,7 @@ module.exports = {
                     "var(--overlay, 0 4px 8px -2px rgba(9, 30, 66, 0.25), 0 0 1px rgba(9, 30, 66, 0.31))",
                 flag: `0 20px 32px -8px ${theme.colors.default.theme_color.shadow2},0 0 1px ${theme.colors.default.theme_color.shadow2}`,
                 modal: `0px 8px 12px ${theme.colors.default.theme_color.shadow1}, 0px 0px 1px ${theme.colors.default.theme_color.shadow2}`,
-                menu: `0px 8px 12px ${theme.colors.default.theme_color.shadow3}, 0px 0px 1px ${theme.colors.default.theme_color.shadow2},0px 4px 8px rgba(9, 30, 66, 0.25), 0px 0px 1px rgba(9, 30, 66, 0.31))`,
+                menu: `0px 8px 12px ${theme.colors.default.theme_color.shadow3}, 0px 0px 1px ${theme.colors.default.theme_color.shadow2},0px 4px 8px rgba(9, 30, 66, 0.25), 0px 0px 1px rgba(9, 30, 66, 0.31)`,
             },
             rotate: {
                 310: "310deg",
