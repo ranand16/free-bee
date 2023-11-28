@@ -90,6 +90,8 @@ NOTE: We will be mentioning only those values which are being used in this proje
 | Radio           | Completed   |
 | Toggle          | Completed   |
 | Tabs            | Completed   |
+| Menu            | Completed   |
+| Navigation      | In Progress |
 | Group Checkbox  | Not Started |
 | Loader          | In Progress |
 | Tooltip         | In Progress |
