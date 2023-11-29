@@ -149,6 +149,7 @@ const theme = {
                 discovery: "#B8ACF6",
                 information: "#85B8FF",
                 "subtlest-old": "#8C9BAB",
+                "subtlest-old2": "#6B778C",
             },
             background: {
                 "default-bold": "#091E420F",

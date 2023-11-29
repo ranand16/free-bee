@@ -14,6 +14,7 @@ export { default as Lozenges } from "./Lozenges";
 export { default as Menu } from "./Menu";
 export { default as Modal } from "./Modal";
 export { default as Multiselect } from "./Multiselect";
+export { default as Navigation } from "./Navigation";
 export { default as Popup } from "./Popup";
 export { default as Radio } from "./Radio";
 export { default as Tab } from "./Tab";
