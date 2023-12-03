@@ -32,7 +32,7 @@ const buttonVariants = cva(
 export interface ButtonProps
     extends ButtonHTMLAttributes<HTMLButtonElement>,
         VariantProps<typeof buttonVariants> {
-    label: string;
+    label: any;
     loading?: boolean;
     disabled?: boolean;
 }
@@ -51,7 +51,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                         <Loader className="" />
                     </div>
                 ) : (
-                    <div>{label}</div>
+                    <>{label}</>
                 )}
             </button>
         );

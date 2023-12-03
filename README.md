@@ -92,6 +92,7 @@ NOTE: We will be mentioning only those values which are being used in this proje
 | Tabs            | Completed   |
 | Menu            | Completed   |
 | Navigation      | In Progress |
+| Dropdown Menu   | In Progress |
 | Group Checkbox  | Not Started |
 | Loader          | In Progress |
 | Tooltip         | In Progress |
