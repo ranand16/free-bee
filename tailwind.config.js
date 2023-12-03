@@ -214,6 +214,7 @@ const theme = {
                 "brand-boldest-pressed": "#85B8FF",
                 "neutral-subtle-pressed": "#A6C5E229",
                 "selected-bg": "#1C2B41",
+                "neutral-pressed-bg": "#091E424F",
 
                 "blue-bold": "#1D7AFC",
                 "blue-bolder-hovered": "#579DFF",

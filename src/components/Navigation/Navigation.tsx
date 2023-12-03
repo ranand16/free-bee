@@ -1,5 +1,6 @@
 import * as React from "react";
 import { FC } from "react";
+import Button from "../Button";
 
 const SvgComponent1 = (props: any) => (
     <svg width={24} height={24} {...props}>
@@ -219,32 +220,38 @@ export interface NavigationProps {}
 
 const Navigation: FC<NavigationProps> = ({}) => {
     return (
-        <header role="banner" className="bg-white text-subtlest-old2">
-            <nav aria-label="Primary" className="css-vtikxo">
+        <header
+            role="banner"
+            className="bg-white text-subtlest-old2 flex box-border h-[56px] px-3 relative items-center justify-between border-b-[1px] border-input-hovered "
+        >
+            <nav
+                aria-label="Primary"
+                className="flex min-w-0 h-inherit items-center flex-grow text-subtlest"
+            >
                 <div>
                     <div role="presentation">
-                        <button
+                        <Button
+                            label={
+                                <span className="">
+                                    <span
+                                        role="img"
+                                        aria-label="Appswitcher Icon"
+                                        className="css-snhnyn"
+                                    >
+                                        <SvgComponent12 />
+                                    </span>
+                                </span>
+                            }
                             aria-expanded="false"
                             aria-haspopup="true"
                             aria-busy="false"
-                            className="css-1iyy2v3"
+                            className="bg-transparent min-w-0 rounded-full p-1 outline-none m-[2px] hover:text-subtle active:text-subtle active:bg-neutral-pressed-bg"
                             tabIndex={0}
-                            type="button"
-                        >
-                            <span className="css-bwxjrz">
-                                <span
-                                    role="img"
-                                    aria-label="Appswitcher Icon"
-                                    className="css-snhnyn"
-                                >
-                                    <SvgComponent12 />
-                                </span>
-                            </span>
-                        </button>
+                        />
                     </div>
                 </div>
                 <a href="/jira" className="css-me4kch">
-                    <div className="css-gij9v3">
+                    <div className="hidden xl:block ">
                         <span
                             aria-label="Jira Software"
                             role="img"
@@ -253,7 +260,7 @@ const Navigation: FC<NavigationProps> = ({}) => {
                             <SvgComponent5 />
                         </span>
                     </div>
-                    <div className="css-1yzgzqg">
+                    <div className="block xl:hidden">
                         <span
                             aria-label="Jira Software"
                             role="img"
@@ -263,29 +270,35 @@ const Navigation: FC<NavigationProps> = ({}) => {
                         </span>
                     </div>
                 </a>
-                <div className="css-njhh6c">
-                    <div className="css-17unx0o">
-                        <button
+                <div
+                    className="flex h-full relative items-stretch m-0 p-0 text-subtlest"
+                    style={{ flex: "1 0 0px" }}
+                >
+                    <div className="flex h-full relative items-center justify-center flex-col mx-1 p-0 my-0 text-subtlest">
+                        <Button
                             aria-expanded="true"
                             aria-haspopup="true"
                             aria-busy="false"
-                            className="css-x0akgx"
                             tabIndex={0}
-                            type="button"
-                        >
-                            <span className="css-178ag6o">Your work</span>
-                            <span className="css-bwxjrz">
-                                .
-                                <div className="css-n08lxq">
-                                    <span
-                                        aria-hidden="true"
-                                        className="css-snhnyn"
-                                    >
-                                        <SvgComponent6 />
+                            label={
+                                <>
+                                    <span className="css-178ag6o">
+                                        Your work
                                     </span>
-                                </div>
-                            </span>
-                        </button>
+                                    <span className="css-bwxjrz">
+                                        .
+                                        <div className="css-n08lxq">
+                                            <span
+                                                aria-hidden="true"
+                                                className="css-snhnyn"
+                                            >
+                                                <SvgComponent6 />
+                                            </span>
+                                        </div>
+                                    </span>
+                                </>
+                            }
+                        />
                     </div>
                     <div className="_wvzr1osq">
                         <div className="css-10d50pf">
