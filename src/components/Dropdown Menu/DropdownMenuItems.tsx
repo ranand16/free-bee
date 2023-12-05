@@ -12,7 +12,7 @@ const DropdownMenuItems = React.forwardRef<
             ref={ref}
             data-placement="bottom-start"
             tabIndex={0}
-            className="fixed block box-border my-0 p-0 ml-3 mt-12 bg-white shadow-light-box overflow-auto z-[400]"
+            className="fixed block box-border my-0 p-0 ml-3 mt-12 bg-white dark:bg-overlay shadow-light-box overflow-auto z-[400]"
             style={{
                 inset: "0px auto auto 0px",
             }}
@@ -34,7 +34,7 @@ const DropdownMenuItems = React.forwardRef<
                 >
                     <button
                         role="menuitem"
-                        className="relative flex box-border w-full min-h-[40px] m-0 items-center text-sm outline-[0px] no-underline select-none py-2 px-4 bg-transparent cursor-pointer"
+                        className="relative flex box-border w-full min-h-[40px] m-0 items-center text-sm outline-[0px] no-underline select-none py-2 px-4 cursor-pointer dark:text-white hover:bg-default-bold dark:hover:text-white dark:hover:bg-neutral-subtle-hovered"
                         type="button"
                     >
                         <span className="css-13ccqna">
@@ -50,7 +50,7 @@ const DropdownMenuItems = React.forwardRef<
                     </button>
                     <button
                         role="menuitem"
-                        className="relative flex box-border w-full min-h-[40px] m-0 items-center text-sm outline-[0px] no-underline select-none py-2 px-4 bg-transparent cursor-pointer"
+                        className="relative flex box-border w-full min-h-[40px] m-0 items-center text-sm outline-[0px] no-underline select-none py-2 px-4 bg-transparent cursor-pointer dark:text-white hover:bg-default-bold dark:hover:text-white dark:hover:bg-neutral-subtle-hovered"
                         type="button"
                     >
                         <span className="css-13ccqna">
@@ -66,7 +66,7 @@ const DropdownMenuItems = React.forwardRef<
                     </button>
                     <button
                         role="menuitem"
-                        className="relative flex box-border w-full min-h-[40px] m-0 items-center text-sm outline-[0px] no-underline select-none py-2 px-4 bg-transparent cursor-pointer"
+                        className="relative flex box-border w-full min-h-[40px] m-0 items-center text-sm outline-[0px] no-underline select-none py-2 px-4 bg-transparent cursor-pointer dark:text-white hover:bg-default-bold dark:hover:text-white dark:hover:bg-neutral-subtle-hovered"
                         type="button"
                     >
                         <span className="css-13ccqna">
@@ -82,7 +82,7 @@ const DropdownMenuItems = React.forwardRef<
                     </button>
                     <button
                         role="menuitem"
-                        className="relative flex box-border w-full min-h-[40px] m-0 items-center text-sm outline-[0px] no-underline select-none py-2 px-4 bg-transparent cursor-pointer"
+                        className="relative flex box-border w-full min-h-[40px] m-0 items-center text-sm outline-[0px] no-underline select-none py-2 px-4 bg-transparent cursor-pointer dark:text-white hover:bg-default-bold dark:hover:text-white dark:hover:bg-neutral-subtle-hovered"
                         type="button"
                     >
                         <span className="css-13ccqna">
@@ -98,7 +98,7 @@ const DropdownMenuItems = React.forwardRef<
                     </button>
                     <button
                         role="menuitem"
-                        className="relative flex box-border w-full min-h-[40px] m-0 items-center text-sm outline-[0px] no-underline select-none py-2 px-4 bg-transparent cursor-pointer"
+                        className="relative flex box-border w-full min-h-[40px] m-0 items-center text-sm outline-[0px] no-underline select-none py-2 px-4 bg-transparent cursor-pointer dark:text-white hover:bg-default-bold dark:hover:text-white dark:hover:bg-neutral-subtle-hovered"
                         type="button"
                     >
                         <span className="css-13ccqna">
@@ -114,7 +114,7 @@ const DropdownMenuItems = React.forwardRef<
                     </button>
                     <button
                         role="menuitem"
-                        className="relative flex box-border w-full min-h-[40px] m-0 items-center text-sm outline-[0px] no-underline select-none py-2 px-4 bg-transparent cursor-pointer"
+                        className="relative flex box-border w-full min-h-[40px] m-0 items-center text-sm outline-[0px] no-underline select-none py-2 px-4 bg-transparent cursor-pointer dark:text-white hover:bg-default-bold dark:hover:text-white dark:hover:bg-neutral-subtle-hovered"
                         type="button"
                     >
                         <span className="css-13ccqna">

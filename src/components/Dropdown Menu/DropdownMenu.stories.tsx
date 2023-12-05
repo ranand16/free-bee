@@ -25,6 +25,7 @@ export const DropdownMenuComponent = () => {
             !dropdownMenuItemsRef.current.contains(event.target) &&
             !btnRef.current.contains(event.target)
         ) {
+            setSelected(false);
             setOpen(false);
         }
     };
@@ -39,7 +40,8 @@ export const DropdownMenuComponent = () => {
     }, []);
 
     return (
-        <div>
+        <div className="relative">
+            {/** This needs to have a height while use */}
             <DropdownMenu
                 ref={btnRef}
                 open={open}
