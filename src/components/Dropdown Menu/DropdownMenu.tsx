@@ -5,11 +5,11 @@ import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "../../utility/functions";
 
 const dropdownMenuVariants = cva(
-    "items-baseline inline-flex max-w-full relative whitespace-nowrap border-0 align-middle justify-center text-default bg-default-bold py-0 px-[10px] leading-8 h-8 hover:bg-default-bold-hovered hover:text-default active:bg-neutral-pressed-bg active:text-default",
+    "items-baseline inline-flex max-w-full relative whitespace-nowrap border-0 align-middle justify-center text-default bg-default-bold dark:text-zinc-dark dark:bg-neutral py-0 px-[10px] leading-8 h-8 hover:bg-default-bold-hovered hover:text-default active:bg-neutral-pressed-bg active:text-default dark:hover:bg-neutral-hovered dark:active:bg-neutral-pressed dark:active:text-zinc-dark",
     {
         variants: {
             selected: {
-                true: "text-selected-tab focus:text-brand-bold active:text-brand-bold hover:text-brand-bold",
+                true: "bg-default-bold dark:bg-selected-dropdown-dark dark:focus:bg-selected-dropdown-dark dark:active:bg-selected-dropdown-dark text-selected-tab focus:text-brand-bold active:text-brand-bold hover:text-brand-bold dark:text-selected-tab-dark dark:focus:text-selected-tab-dark dark:active:text-selected-tab-dark dark:hover:text-selected-tab-dark",
                 false: "",
             },
             open: {
