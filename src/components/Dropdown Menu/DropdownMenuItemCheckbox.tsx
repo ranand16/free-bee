@@ -8,8 +8,6 @@ export interface DropdownMenuItemProps
     labelWrap?: boolean;
     descriptionWrap?: boolean;
     isDisabled?: boolean;
-    elemBefore?: any;
-    elemAfter?: any;
 }
 
 const DropdownMenuItem: React.FC<DropdownMenuItemProps> = ({
@@ -18,15 +16,13 @@ const DropdownMenuItem: React.FC<DropdownMenuItemProps> = ({
     labelWrap = false,
     descriptionWrap = false,
     isDisabled = false,
-    elemBefore,
-    elemAfter,
     children,
 }) => {
     return (
         <button
             role="menuitem"
             className={cn(
-                "relative flex box-border w-full min-h-[40px] m-0 items-center text-sm outline-[0px] no-underline select-none py-2 px-4 cursor-pointer dark:text-zinc-dark hover:bg-default-bold dark:hover:text-zinc-dark dark:hover:bg-neutral-subtle-hovered",
+                "relative flex box-border w-full min-h-[40px] m-0 items-center text-sm outline-[0px] no-underline select-none py-2 px-4 cursor-pointer dark:text-white hover:bg-default-bold dark:hover:text-white dark:hover:bg-neutral-subtle-hovered",
                 {
                     "cursor-not-allowed text-disabled-alternate hover:text-disabled-alternate dark:text-disabled-txt dark:hover:text-disabled-txt bg-neutral-subtle hover:bg-neutral-subtle dark:bg-neutral-subtle dark:hover:bg-neutral-subtle":
                         isDisabled,
@@ -37,11 +33,6 @@ const DropdownMenuItem: React.FC<DropdownMenuItemProps> = ({
             {children}
             {!children && (
                 <span className="flex box-border gap-3 items-center justify-between w-full flex-grow">
-                    {elemBefore && (
-                        <span className="flex items-center justify-between shrink-0 ">
-                            {elemBefore}
-                        </span>
-                    )}
                     <span className="flex justify-between flex-col grow leading-4 text-left overflow-hidden">
                         <span
                             className={cn(
@@ -58,7 +49,7 @@ const DropdownMenuItem: React.FC<DropdownMenuItemProps> = ({
                         >
                             {label}
                         </span>
-                        {description && (
+                        {description && !label && (
                             <span
                                 className={cn(
                                     "mt-1 text-xs dark:text-subtlest-old text-subtlest-old ",
@@ -73,11 +64,6 @@ const DropdownMenuItem: React.FC<DropdownMenuItemProps> = ({
                             </span>
                         )}
                     </span>
-                    {elemAfter && (
-                        <span className="flex items-center justify-between shrink-0 ">
-                            {elemAfter}
-                        </span>
-                    )}
                 </span>
             )}
         </button>
