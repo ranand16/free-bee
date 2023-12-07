@@ -123,6 +123,7 @@ const theme = {
                 "accent-gray": "#9FADBC",
                 "disabled-alternate": "#091E424F",
                 "zinc-dark": "#B6C2CF",
+                "disabled-txt": "#BFDBF847",
 
                 "accent-lime": "#B3DF72",
                 "accent-lime-bolder": "#D3F1A7",
@@ -141,7 +142,6 @@ const theme = {
                 "accent-magenta": "#F797D2",
                 "accent-magenta-bolder": "#FDD0EC",
                 "accent-gray-bolder": "#DEE4EA",
-                "disabled-txt": "#BFDBF847",
                 brand: "#579DFF",
                 danger: "#FF9C8F",
                 warning: "#F5CD47",
@@ -219,6 +219,7 @@ const theme = {
                 neutral: "#A1BDD914",
                 "neutral-pressed": "#BFDBF847",
                 "neutral-subtle-hovered": "#A1BDD914",
+                "neutral-subtle": "#00000000",
 
                 "blue-bold": "#1D7AFC",
                 "blue-bolder-hovered": "#579DFF",
@@ -262,7 +263,6 @@ const theme = {
                 "inverse-subtle": "#FFFFFF29",
                 "inverse-subtle-hovered": "#FFFFFF3D",
                 "inverse-subtle-pressed": "#FFFFFF52",
-                "neutral-subtle": "#00000000",
                 "neutral-bold-pressed": "#C7D1DB",
                 selected: "#092957",
                 "selected-hovered": "#09326C",
