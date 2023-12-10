@@ -14,7 +14,7 @@ const DropdownMenuItemGroup = React.forwardRef<
             ref={ref}
             data-placement="bottom-start"
             tabIndex={0}
-            className="fixed block box-border my-0 p-0 ml-3 mt-12 bg-white dark:bg-overlay shadow-light-box overflow-auto z-[400]"
+            className="absolute top-0 left-0 block box-border my-0 p-0 mt-10 bg-white dark:bg-overlay shadow-light-box overflow-auto z-[400]"
             style={{
                 inset: "0px auto auto 0px",
             }}

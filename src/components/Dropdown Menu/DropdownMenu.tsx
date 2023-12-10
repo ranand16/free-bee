@@ -5,7 +5,7 @@ import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "../../utility/functions";
 
 const dropdownMenuVariants = cva(
-    "items-baseline inline-flex max-w-full relative whitespace-nowrap border-0 align-middle justify-center text-default bg-default-bold dark:text-zinc-dark dark:bg-neutral py-0 px-[10px] leading-8 h-8 hover:bg-default-bold-hovered hover:text-default active:bg-neutral-pressed-bg active:text-default dark:hover:bg-neutral-hovered dark:active:bg-neutral-pressed dark:active:text-zinc-dark",
+    "items-baseline inline-flex max-w-full relative whitespace-nowrap border-0 align-middle justify-center text-default bg-transparent dark:text-zinc-dark dark:bg-neutral py-0 px-[10px] leading-8 h-8 hover:bg-default-bold-hovered hover:text-default active:bg-neutral-pressed-bg active:text-default dark:hover:bg-neutral-hovered dark:active:bg-neutral-pressed dark:active:text-zinc-dark",
     {
         variants: {
             selected: {
@@ -29,7 +29,7 @@ export interface DropdownMenuProps
     label: any;
     selected: boolean;
     open: boolean;
-    callback: React.MouseEventHandler; // likely to bew a function
+    callback: (val: string) => void; // likely to bew a function
 }
 
 const DropdownMenu = React.forwardRef<HTMLButtonElement, DropdownMenuProps>(
@@ -43,21 +43,26 @@ const DropdownMenu = React.forwardRef<HTMLButtonElement, DropdownMenuProps>(
                     ref={ref}
                     className={cn(
                         dropdownMenuVariants({
+                            className,
                             selected,
                             open,
-                            className,
                         })
                     )}
-                    onClick={callback}
+                    onClick={() => callback(label)}
                     label={
                         <>
                             <span className="opacity-100 my-0 mx-[2px] flex-shrink grow overflow-hidden whitespace-nowrap text-ellipsis">
                                 {label}
                             </span>
-                            <span className="opacity-100 flex my-0 mx-[2px] flex-grow self-center select-none leading-[0]">
-                                <span aria-hidden="true" className="css-xyfxod">
-                                    <DownArrowComponent />
-                                </span>
+                            <span className="opacity-100 transition-opacity duration-300 ease-in-out flex my-0 ml-[2px] mr-[-2px] flex-grow-0 shrink-0 self-center text-[0px] select-none leading-[0]">
+                                <div className="box-border opacity-50 mx-[-4px]">
+                                    <span
+                                        aria-hidden="true"
+                                        className="inline-block shrink-0 leading-4"
+                                    >
+                                        <DownArrowComponent />
+                                    </span>
+                                </div>
                             </span>
                         </>
                     }

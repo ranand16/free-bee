@@ -20,18 +20,19 @@ const DropdownMenuItem: React.FC<DropdownMenuItemProps> = ({
     isDisabled = false,
     elemBefore,
     elemAfter,
+    className,
     children,
 }) => {
     return (
         <button
             role="menuitem"
-            className={cn(
-                "relative flex box-border w-full min-h-[40px] m-0 items-center text-sm outline-[0px] no-underline select-none py-2 px-4 cursor-pointer dark:text-zinc-dark hover:bg-default-bold dark:hover:text-zinc-dark dark:hover:bg-neutral-subtle-hovered",
-                {
-                    "cursor-not-allowed text-disabled-alternate hover:text-disabled-alternate dark:text-disabled-txt dark:hover:text-disabled-txt bg-neutral-subtle hover:bg-neutral-subtle dark:bg-neutral-subtle dark:hover:bg-neutral-subtle":
-                        isDisabled,
-                }
-            )}
+            className={cn({
+                className: className !== undefined,
+                "relative flex box-border w-full min-h-[40px] m-0 items-center text-sm outline-[0px] no-underline select-none py-2 px-4 cursor-pointer dark:text-zinc-dark hover:bg-default-bold dark:hover:text-zinc-dark dark:hover:bg-neutral-subtle-hovered":
+                    true,
+                "cursor-not-allowed text-disabled-alternate hover:text-disabled-alternate dark:text-disabled-txt dark:hover:text-disabled-txt bg-neutral-subtle hover:bg-neutral-subtle dark:bg-neutral-subtle dark:hover:bg-neutral-subtle":
+                    isDisabled,
+            })}
             type="button"
         >
             {children}
