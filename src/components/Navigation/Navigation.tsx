@@ -1,6 +1,9 @@
 import * as React from "react";
 import { FC } from "react";
 import Button from "../Button";
+import DropdownMenuItemGroup from "../Dropdown Menu/DropdownMenuItemGroup";
+import DropdownMenuItem from "../Dropdown Menu/DropdownMenuItem";
+import DropdownMenu from "../Dropdown Menu";
 
 const SvgComponent1 = (props: any) => (
     <svg width={24} height={24} {...props}>
@@ -184,7 +187,7 @@ const SvgComponent13 = (props: any) => (
 );
 
 const SvgComponent14 = (props: any) => (
-    <svg width={24} height={24} {...props}>
+    <svg width={24} height={24} viewBox="0 0 24 24" {...props}>
         <path
             fill="currentColor"
             fillRule="evenodd"
@@ -219,6 +222,44 @@ const SvgComponent16 = (props: any) => (
 export interface NavigationProps {}
 
 const Navigation: FC<NavigationProps> = ({}) => {
+    const [selected, setSelected] = React.useState<boolean | string>(false);
+    const [open, setOpen] = React.useState<boolean | string>(false);
+    const dropdownMenuItemsRef = React.useRef<any>(null);
+    const btnRef = React.useRef<any>(null);
+    const labels: string[] = [
+        "Your work",
+        "Projects",
+        "Filters",
+        "Dashboards",
+        "Teams",
+        "Plans",
+        "Apps",
+    ];
+
+    const toggleNow = React.useCallback((val: string) => {
+        setSelected(val);
+        setOpen(val);
+    }, []);
+
+    const handler = (event: MouseEvent) => {
+        if (!dropdownMenuItemsRef.current) return;
+        if (
+            !dropdownMenuItemsRef.current.contains(event.target) &&
+            !btnRef.current.contains(event.target)
+        ) {
+            setSelected(false);
+            setOpen(false);
+        }
+    };
+
+    React.useEffect(() => {
+        // the key is using the `true` option
+        // `true` will enable the `capture` phase of event handling by browser
+        document.addEventListener("click", handler, true);
+        return () => {
+            document.removeEventListener("click", handler, true);
+        };
+    }, []);
     return (
         <header
             role="banner"
@@ -250,7 +291,7 @@ const Navigation: FC<NavigationProps> = ({}) => {
                         />
                     </div>
                 </div>
-                <a href="/jira" className="css-me4kch">
+                <a href="/jira" className="mr-4">
                     <div className="hidden xl:block ">
                         <span
                             aria-label="Jira Software"
@@ -270,251 +311,80 @@ const Navigation: FC<NavigationProps> = ({}) => {
                         </span>
                     </div>
                 </a>
-                <div
-                    className="flex h-full relative items-stretch m-0 p-0 text-subtlest"
-                    style={{ flex: "1 0 0px" }}
-                >
-                    <div className="flex h-full relative items-center justify-center flex-col mx-1 p-0 my-0 text-subtlest">
-                        <Button
-                            aria-expanded="true"
-                            aria-haspopup="true"
-                            aria-busy="false"
-                            tabIndex={0}
-                            label={
-                                <>
-                                    <span className="css-178ag6o">
-                                        Your work
-                                    </span>
-                                    <span className="css-bwxjrz">
-                                        .
-                                        <div className="css-n08lxq">
-                                            <span
-                                                aria-hidden="true"
-                                                className="css-snhnyn"
-                                            >
-                                                <SvgComponent6 />
-                                            </span>
-                                        </div>
-                                    </span>
-                                </>
-                            }
-                        />
-                    </div>
-                    <div className="_wvzr1osq">
-                        <div className="css-10d50pf">
-                            <button
-                                aria-expanded="false"
-                                aria-haspopup="true"
-                                aria-busy="false"
-                                className="css-798be7"
-                                tabIndex={0}
-                                type="button"
-                            >
-                                <span className="css-178ag6o">Projects</span>
-                                <span className="css-bwxjrz">
-                                    <div className="css-n08lxq">
-                                        <span
-                                            aria-hidden="true"
-                                            className="css-snhnyn"
-                                        >
-                                            <SvgComponent7 />
-                                        </span>
-                                    </div>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                    <div className="css-17unx0o">
-                        <button
-                            aria-expanded="false"
-                            aria-haspopup="true"
-                            aria-busy="false"
-                            className="css-798be7"
-                            tabIndex={0}
-                            type="button"
-                        >
-                            <span className="css-178ag6o">Filters</span>
-                            <span className="css-bwxjrz">
-                                <div className="css-n08lxq">
-                                    <span
-                                        aria-hidden="true"
-                                        className="css-snhnyn"
-                                    >
-                                        <SvgComponent8 />
-                                    </span>
-                                </div>
-                            </span>
-                        </button>
-                    </div>
-                    <div className="css-17unx0o">
-                        <button
-                            aria-expanded="false"
-                            aria-haspopup="true"
-                            aria-busy="false"
-                            className="css-798be7"
-                            tabIndex={0}
-                            type="button"
-                        >
-                            <span className="css-178ag6o">Dashboards</span>
-                            <span className="css-bwxjrz">
-                                <div className="css-n08lxq">
-                                    <span
-                                        aria-hidden="true"
-                                        className="css-snhnyn"
-                                    >
-                                        <SvgComponent9 />
-                                    </span>
-                                </div>
-                            </span>
-                        </button>
-                    </div>
-                    <div className="_4t3i1osq _1e0c1txw _4cvr1h6o _19pnkb7n _13aikb7n _1gqrf1ug">
-                        <div
-                            data-testid="menu-people-wrapper"
-                            className="_1e0c1txw _4t3i1osq _16jlkb7n _shj5kb7n"
-                        >
-                            <div className="css-17unx0o">
-                                <button
-                                    aria-expanded="false"
-                                    aria-haspopup="true"
-                                    aria-busy="false"
-                                    className="css-798be7"
-                                    data-testid="menu-people-primary-button"
-                                    tabIndex={0}
-                                    type="button"
+                <div className="flex h-full relative items-stretch m-0 p-0 text-subtlest flex-shrink-0 flex-grow basis-0">
+                    {labels.map((oneLabel, i) => {
+                        return (
+                            <div className="relative flex h-full items-center justify-center flex-col m-1 shrink-0 p-0 text-subtlest">
+                                <DropdownMenu
+                                    className="px-1 text-blue min-w-0 transition-dropdownbtn"
+                                    ref={btnRef}
+                                    open={open === oneLabel}
+                                    selected={selected === oneLabel}
+                                    callback={(val) => toggleNow(val)}
+                                    label={oneLabel}
                                 >
-                                    <span className="css-178ag6o">Teams</span>
-                                    <span className="css-bwxjrz">
-                                        <div className="css-n08lxq">
-                                            <span
-                                                aria-hidden="true"
-                                                className="css-snhnyn"
-                                            >
-                                                <SvgComponent10 />
-                                            </span>
-                                        </div>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="_4t3i1474 _19pk338m _ca0q9s41 _1e0cu13u _2lx2dury _1bahdlq5 _bfhk1fzw">
-                        <div
-                            data-uid="plans-spotlight-target-wrapper"
-                            className="_4t3i1474 _19pk338m _ca0q9s41 _1e0cu13u _2lx2dury _1bahdlq5 _bfhk1fzw"
-                        >
-                            <div className="_4t3i1osq _1e0c1txw _4cvr1h6o _19pnkb7n _13aikb7n _1gqrf1ug">
-                                <div className="css-17unx0o">
-                                    <button
-                                        aria-expanded="false"
-                                        aria-haspopup="true"
-                                        aria-busy="false"
-                                        className="css-798be7"
-                                        tabIndex={0}
-                                        type="button"
+                                    <DropdownMenuItemGroup
+                                        ref={dropdownMenuItemsRef}
                                     >
-                                        <span className="css-178ag6o">
-                                            Plans
-                                        </span>
-                                        <span className="css-bwxjrz">
-                                            <div className="css-n08lxq">
-                                                <span
-                                                    aria-hidden="true"
-                                                    className="css-snhnyn"
-                                                >
-                                                    <SvgComponent11 />
-                                                </span>
-                                            </div>
-                                        </span>
-                                    </button>
-                                </div>
+                                        <DropdownMenuItem label="Edit" />
+                                        <DropdownMenuItem label="Share" />
+                                        <DropdownMenuItem label="Move" />
+                                        <DropdownMenuItem label="Clone" />
+                                        <DropdownMenuItem label="Share" />
+                                        <DropdownMenuItem label="Delete" />
+                                        <DropdownMenuItem label="Report" />
+                                    </DropdownMenuItemGroup>
+                                </DropdownMenu>
                             </div>
-                        </div>
-                    </div>
-                    <div className="_4t3i1osq _1e0c1txw _4cvr1h6o _19pnkb7n _13aikb7n _1gqrf1ug">
-                        <div className="css-17unx0o">
-                            <button
-                                aria-expanded="false"
-                                aria-haspopup="true"
-                                aria-busy="false"
-                                className="css-798be7"
-                                tabIndex={0}
-                                type="button"
-                            >
-                                <span className="css-178ag6o">Apps</span>
-                                <span className="css-bwxjrz">
-                                    <div className="css-n08lxq">
-                                        <span
-                                            aria-hidden="true"
-                                            className="css-snhnyn"
-                                        >
-                                            <SvgComponent2 />
-                                        </span>
-                                    </div>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
+                        );
+                    })}
+
                     <div
-                        data-testid="create-button-wrapper"
-                        className="css-hue21z"
+                        data-testid=""
+                        className="ml-3 flex items-center mr-1 shrink-0 p-0 text-subtlest "
                     >
-                        <button
+                        <Button
                             id="createGlobalItem"
                             data-hide-on-smallscreens="true"
-                            aria-busy="false"
-                            className="css-1oonzef"
-                            tabIndex={0}
-                            type="button"
-                        >
-                            <span className="css-178ag6o">Create</span>
-                        </button>
-                        <button
+                            label={"Create"}
+                            variant={"primary"}
+                            className="min-w-0 shrink grow h-8 hidden xl:flex"
+                        />
+                        <Button
                             id="createGlobalItemIconButton"
                             aria-label="Create"
                             data-hide-on-largescreens="true"
-                            aria-busy="false"
-                            className="css-17aeism"
-                            tabIndex={0}
-                            type="button"
-                        >
-                            <span className="css-bwxjrz">
-                                <span
-                                    role="img"
-                                    aria-label="Create"
-                                    className="css-snhnyn"
-                                >
-                                    <SvgComponent3 />
-                                </span>
-                            </span>
-                        </button>
+                            label={<SvgComponent3 />}
+                            className="min-w-0 p-1 h-8 xl:hidden"
+                            variant={"primary"}
+                        />
                     </div>
-                    <div className="css-1ozpmrm">
-                        <div className="block w-full absolute"></div>
+                    <div className="w-full min-w-[1px] m-0 relative shrink p-0 block text-subtlest">
+                        <div className="block w-full absolute m-0 p-0"></div>
                     </div>
                 </div>
             </nav>
-            <div className="css-1kpbp8m">
-                <div className="_1e0c1txw _1bah1h6o _4cvr1h6o _kqswh2mm">
-                    <div className="_1xhqi2wt">
+            <div className="flex items-center shrink-0 m-0 p-0 text-subtlest">
+                <div className="justify-center items-center flex relative mr-2 shirnk-0 text-subtlest">
+                    <div className="p-0 m-0 block text-subtlest">
                         <div>
-                            <div className="css-9wcsid">
-                                <div className="css-0">
-                                    <div className="css-79elbk">
-                                        <div role="presentation">
-                                            <div className="css-pddbfj">
-                                                <span className="css-wsgzdc">
+                            <div className="relative w-8 h-8 m-0 p-0 block min-w-[200px]">
+                                <div className="m-0 p-0 block text-subtlest">
+                                    <div className="relative m-0 p-0 text-subtlest">
+                                        <div role="m-0 p-0 block">
+                                            <div className="relative max-w-full w-[200px] m-0 p-0 block">
+                                                <span className="block md:hidden text-subtlest">
                                                     <button
                                                         aria-busy="false"
-                                                        className="css-1p9mxd0"
+                                                        className=""
                                                         tabIndex={0}
                                                         type="button"
                                                     >
-                                                        <span className="css-bwxjrz">
+                                                        <span className="opacity-100 transition-opacity duration-300 ease-in-out flex grow-0 shrink-0 self-center text-[0px] leading-none">
                                                             <span
                                                                 role="img"
                                                                 aria-label="search"
-                                                                className="css-1afrefi"
+                                                                className="inline-block leading-none w-6 h-6"
                                                             >
                                                                 <SvgComponent13 />
                                                             </span>
@@ -523,20 +393,24 @@ const Navigation: FC<NavigationProps> = ({}) => {
                                                 </span>
                                                 <span
                                                     tabIndex={0}
-                                                    className="css-lvi2ji"
+                                                    className="hidden md:block w-4 h-4 absolute left-2 top-2 text-subtlest"
                                                 >
                                                     <span
                                                         role="img"
                                                         aria-label="search"
-                                                        className="css-1wits42"
+                                                        className="leading-none inline-block w-4 h-4 text-subtlest"
                                                     >
-                                                        <SvgComponent14 />
+                                                        <SvgComponent14
+                                                            className={
+                                                                "overflow-hidden pointer-events-none max-w-full max-h-full text-subtlest"
+                                                            }
+                                                        />
                                                     </span>
                                                 </span>
                                                 <input
+                                                    className="hidden md:inline-block h-8 py-0 pr-3 pl-8 box-border border border-input-hovered text-sm leading-5 text-subtlest bg-white"
                                                     data-test-id="search-dialog-input"
                                                     placeholder="Search"
-                                                    className="css-1hswbg8"
                                                     value=""
                                                 />
                                             </div>
@@ -544,7 +418,7 @@ const Navigation: FC<NavigationProps> = ({}) => {
                                         <div
                                             data-test-id="search-dialog-dialog-wrapper"
                                             tabIndex={-1}
-                                            className="css-44vo0a"
+                                            className="relative shadow-none w-[780px] rounded bg-white mt-2 overflow-hidden flex flex-col h-full"
                                         ></div>
                                     </div>
                                 </div>
@@ -635,7 +509,7 @@ const Navigation: FC<NavigationProps> = ({}) => {
                         </button>
                     </div>
                 </div>
-                <div>
+                {/* <div>
                     <span className="sc-bwzfXH huckDO">
                         <div className="yriyr-0 fnPRtL">
                             <div role="presentation">
@@ -665,7 +539,7 @@ const Navigation: FC<NavigationProps> = ({}) => {
                             </div>
                         </div>
                     </span>
-                </div>
+                </div> */}
             </div>
         </header>
     );

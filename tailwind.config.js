@@ -566,6 +566,8 @@ module.exports = {
             },
             transitionProperty: {
                 bgColor: "background-color",
+                dropdownbtn:
+                    "background 0.1s ease-out 0s, box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38) 0s",
             },
             scale: {
                 "radio-scale": "0.583",
