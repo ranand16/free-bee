@@ -365,14 +365,14 @@ const Navigation: FC<NavigationProps> = ({}) => {
                 </div>
             </nav>
             <div className="flex items-center shrink-0 m-0 p-0 text-subtlest">
-                <div className="justify-center items-center flex relative mr-2 shirnk-0 text-subtlest">
+                <div className="justify-center items-center flex relative mr-1 shirnk-0 text-subtlest">
                     <div className="p-0 m-0 block text-subtlest">
                         <div>
                             <div className="relative w-8 h-8 m-0 p-0 block min-w-[200px]">
                                 <div className="m-0 p-0 block text-subtlest">
                                     <div className="relative m-0 p-0 text-subtlest">
                                         <div role="m-0 p-0 block">
-                                            <div className="relative max-w-full w-[200px] m-0 p-0 block">
+                                            <div className="group-focus:w-[400px] relative max-w-full w-[200px] m-0 p-0 block">
                                                 <span className="block md:hidden text-subtlest">
                                                     <button
                                                         aria-busy="false"
@@ -393,7 +393,7 @@ const Navigation: FC<NavigationProps> = ({}) => {
                                                 </span>
                                                 <span
                                                     tabIndex={0}
-                                                    className="hidden md:block w-4 h-4 absolute left-2 top-2 text-subtlest"
+                                                    className="hidden md:block leading-5 w-4 h-4 absolute left-2 top-2 text-subtlest"
                                                 >
                                                     <span
                                                         role="img"
@@ -408,7 +408,7 @@ const Navigation: FC<NavigationProps> = ({}) => {
                                                     </span>
                                                 </span>
                                                 <input
-                                                    className="hidden md:inline-block h-8 py-0 pr-3 pl-8 box-border border border-input-hovered text-sm leading-5 text-subtlest bg-white"
+                                                    className="group hidden md:inline-block h-8 py-0 pr-3 pl-8 box-border border-2 rounded-md border-input-hovered text-sm leading-5 text-subtlest bg-white placeholder:block placeholder:text-gray-chateau placeholder:leading-5"
                                                     data-test-id="search-dialog-input"
                                                     placeholder="Search"
                                                     value=""

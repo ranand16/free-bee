@@ -124,6 +124,7 @@ const theme = {
                 "disabled-alternate": "#091E424F",
                 "zinc-dark": "#B6C2CF",
                 "disabled-txt": "#BFDBF847",
+                "gray-chateau": "#9ca3af",
 
                 "accent-lime": "#B3DF72",
                 "accent-lime-bolder": "#D3F1A7",
