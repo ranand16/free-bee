@@ -8,7 +8,7 @@ export default {
 
 export const NavigationComponent = () => {
     return (
-        <div>
+        <div className="w-[1500px]">
             <Navigation />
         </div>
     );
