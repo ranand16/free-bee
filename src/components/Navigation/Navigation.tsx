@@ -368,11 +368,11 @@ const Navigation: FC<NavigationProps> = ({}) => {
                 <div className="justify-center items-center flex relative mr-1 shirnk-0 text-subtlest">
                     <div className="p-0 m-0 block text-subtlest">
                         <div>
-                            <div className="relative w-8 h-8 m-0 p-0 block min-w-[200px]">
+                            <div className=" w-8 h-8 m-0 p-0 block min-w-[200px]">
                                 <div className="m-0 p-0 block text-subtlest">
-                                    <div className="relative m-0 p-0 text-subtlest">
+                                    <div className="m-0 p-0 text-subtlest">
                                         <div role="m-0 p-0 block">
-                                            <div className="group-focus:w-[400px] relative max-w-full w-[200px] m-0 p-0 block">
+                                            <div className="group max-w-full w-[780px] m-0 p-0 block mr-0">
                                                 <span className="block md:hidden text-subtlest">
                                                     <button
                                                         aria-busy="false"
@@ -408,7 +408,7 @@ const Navigation: FC<NavigationProps> = ({}) => {
                                                     </span>
                                                 </span>
                                                 <input
-                                                    className="group hidden md:inline-block h-8 py-0 pr-3 pl-8 box-border border-2 rounded-md border-input-hovered text-sm leading-5 text-subtlest bg-white placeholder:block placeholder:text-gray-chateau placeholder:leading-5"
+                                                    className="group-focus-within:min-w-[780px] group-focus-within:shadow-2xl group-focus-within:translate-y-[-50%] group-focus-within:top-1/2 group-focus-within:right-0 group-focus-within:absolute hidden md:inline-block h-8 py-0 pr-3 pl-8 box-border border-2 rounded-md border-input-hovered text-sm leading-5 text-subtlest bg-white placeholder:block placeholder:text-gray-chateau placeholder:leading-5 shadow-none"
                                                     data-test-id="search-dialog-input"
                                                     placeholder="Search"
                                                     value=""
@@ -426,15 +426,16 @@ const Navigation: FC<NavigationProps> = ({}) => {
                         </div>
                     </div>
                 </div>
-                <div>
-                    <div className="css-79elbk">
-                        <div role="presentation">
+
+                <div className="mr-1 shrink-0 block">
+                    <div className="relative m-0 p-0 block">
+                        <div role="presentation" className="m-0 p-0 block">
                             <button
                                 aria-describedby="atlassian-navigation-notification-count"
                                 aria-expanded="false"
                                 aria-haspopup="true"
                                 aria-busy="false"
-                                className="css-1iyy2v3"
+                                className="rounded-full hover:bg-default-bold-hovered flex box-border text-center relative max-w-full cursor-pointer justify-center p-1 outline-none mx-[2px]"
                                 tabIndex={0}
                                 type="button"
                             >
@@ -449,97 +450,60 @@ const Navigation: FC<NavigationProps> = ({}) => {
                                 </span>
                             </button>
                         </div>
-                        <div
-                            id="atlassian-navigation-notification-count"
-                            aria-hidden="true"
-                            className="css-1rkfc9x"
-                        ></div>
                     </div>
                 </div>
-                <div>
-                    <div data-test-id="ak-spotlight-target-help-spotlight">
-                        <div className="css-79elbk">
-                            <div role="presentation">
-                                <button
-                                    aria-expanded="false"
-                                    aria-haspopup="false"
-                                    aria-busy="false"
-                                    className="css-1iyy2v3"
-                                    tabIndex={0}
-                                    type="button"
-                                >
-                                    <span className="css-bwxjrz">
-                                        <span
-                                            role="img"
-                                            aria-label="Help"
-                                            className="css-snhnyn"
-                                        >
-                                            <SvgComponent16 />
-                                        </span>
+
+                <div className="mr-1 shrink-0 block">
+                    <div className="relative m-0 p-0 block">
+                        <div role="presentation" className="m-0 p-0 block">
+                            <button
+                                aria-describedby="atlassian-navigation-notification-count"
+                                aria-expanded="false"
+                                aria-haspopup="true"
+                                aria-busy="false"
+                                className="rounded-full hover:bg-default-bold-hovered flex box-border text-center relative max-w-full cursor-pointer justify-center p-1 outline-none mx-[2px]"
+                                tabIndex={0}
+                                type="button"
+                            >
+                                <span className="css-bwxjrz">
+                                    <span
+                                        role="img"
+                                        aria-label="Notifications"
+                                        className="css-snhnyn"
+                                    >
+                                        <SvgComponent16 />
                                     </span>
-                                </button>
-                            </div>
-                            <div
-                                id="atlassian-navigation-help-notification-count"
-                                aria-hidden="true"
-                                className="css-1rkfc9x"
-                            ></div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div role="presentation">
-                        <button
-                            aria-expanded="false"
-                            aria-haspopup="true"
-                            aria-busy="false"
-                            className="css-1iyy2v3"
-                            tabIndex={0}
-                            type="button"
-                        >
-                            <span className="css-bwxjrz">
-                                <span
-                                    role="img"
-                                    aria-label="Settings"
-                                    className="css-snhnyn"
-                                >
-                                    <SvgComponent1 />
                                 </span>
-                            </span>
-                        </button>
+                            </button>
+                        </div>
                     </div>
                 </div>
-                {/* <div>
-                    <span className="sc-bwzfXH huckDO">
-                        <div className="yriyr-0 fnPRtL">
-                            <div role="presentation">
-                                <button
-                                    aria-expanded="false"
-                                    aria-haspopup="true"
-                                    aria-label="Your profile and settings"
-                                    aria-busy="false"
-                                    className="css-1iyy2v3"
-                                    tabIndex={0}
-                                    type="button"
-                                >
-                                    <span className="css-bwxjrz">
-                                        <span data-test-id="ak-spotlight-target-profile-spotlight">
-                                            <div>
-                                                <span className="css-vnrk9l">
-                                                    <img
-                                                        src="https://secure.gravatar.com/avatar/973c5f308cbf06bd4fa9e96f71ed1816?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRA-5.png"
-                                                        alt=""
-                                                        className="css-13ep12v"
-                                                    />
-                                                </span>
-                                            </div>
-                                        </span>
+
+                <div className="mr-1 shrink-0 block">
+                    <div className="relative m-0 p-0 block">
+                        <div role="presentation" className="m-0 p-0 block">
+                            <button
+                                aria-describedby="atlassian-navigation-notification-count"
+                                aria-expanded="false"
+                                aria-haspopup="true"
+                                aria-busy="false"
+                                className="rounded-full hover:bg-default-bold-hovered flex box-border text-center relative max-w-full cursor-pointer justify-center p-1 outline-none mx-[2px]"
+                                tabIndex={0}
+                                type="button"
+                            >
+                                <span className="css-bwxjrz">
+                                    <span
+                                        role="img"
+                                        aria-label="Notifications"
+                                        className="css-snhnyn"
+                                    >
+                                        <SvgComponent1 />
                                     </span>
-                                </button>
-                            </div>
+                                </span>
+                            </button>
                         </div>
-                    </span>
-                </div> */}
+                    </div>
+                </div>
             </div>
         </header>
     );
